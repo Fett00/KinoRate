@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */; };
+		5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609662588E6B700D1CB8B /* ProfileViewController.swift */; };
+		5A9D9FB02583BA8A001CADF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */; };
+		5A9D9FB22583BA8A001CADF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FB12583BA8A001CADF9 /* SceneDelegate.swift */; };
+		5A9D9FBA2583BA8A001CADF9 /* KinoRate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FB82583BA8A001CADF9 /* KinoRate.xcdatamodeld */; };
+		5A9D9FBC2583BA8C001CADF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9D9FBB2583BA8C001CADF9 /* Assets.xcassets */; };
+		5A9D9FBF2583BA8C001CADF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9D9FBD2583BA8C001CADF9 /* LaunchScreen.storyboard */; };
+		5A9D9FCE2583BCAA001CADF9 /* SceneDelegateExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FCD2583BCAA001CADF9 /* SceneDelegateExtansion.swift */; };
+		5A9D9FD42583C093001CADF9 /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FD32583C093001CADF9 /* FilmsViewController.swift */; };
+		5A9D9FD72583C09A001CADF9 /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FD62583C09A001CADF9 /* RatesViewController.swift */; };
+		5A9D9FDA2583C0A0001CADF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FD92583C0A0001CADF9 /* SettingsViewController.swift */; };
+		5A9D9FDD2583E698001CADF9 /* fichi.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5A9D9FDC2583E698001CADF9 /* fichi.rtf */; };
+		5A9D9FE82583E9BB001CADF9 /* SettingsSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FE72583E9BB001CADF9 /* SettingsSubViewController.swift */; };
+		5A9D9FEB2583EA04001CADF9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FEA2583EA04001CADF9 /* AboutViewController.swift */; };
+		5A9D9FEE2583EB22001CADF9 /* TempDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */; };
+		5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtansion.swift; sourceTree = "<group>"; };
+		5A8609662588E6B700D1CB8B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5A9D9FAC2583BA8A001CADF9 /* KinoRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A9D9FB12583BA8A001CADF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5A9D9FB92583BA8A001CADF9 /* KinoRate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KinoRate.xcdatamodel; sourceTree = "<group>"; };
+		5A9D9FBB2583BA8C001CADF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A9D9FBE2583BA8C001CADF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A9D9FC02583BA8C001CADF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9D9FCD2583BCAA001CADF9 /* SceneDelegateExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateExtansion.swift; sourceTree = "<group>"; };
+		5A9D9FD32583C093001CADF9 /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
+		5A9D9FD62583C09A001CADF9 /* RatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesViewController.swift; sourceTree = "<group>"; };
+		5A9D9FD92583C0A0001CADF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5A9D9FDC2583E698001CADF9 /* fichi.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = fichi.rtf; sourceTree = "<group>"; };
+		5A9D9FE72583E9BB001CADF9 /* SettingsSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSubViewController.swift; sourceTree = "<group>"; };
+		5A9D9FEA2583EA04001CADF9 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDataSource.swift; sourceTree = "<group>"; };
+		5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A9D9FA92583BA8A001CADF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A9D9FA32583BA89001CADF9 = {
+			isa = PBXGroup;
+			children = (
+				5A9D9FDC2583E698001CADF9 /* fichi.rtf */,
+				5A9D9FAE2583BA8A001CADF9 /* KinoRate */,
+				5A9D9FAD2583BA8A001CADF9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A9D9FAD2583BA8A001CADF9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D9FAC2583BA8A001CADF9 /* KinoRate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A9D9FAE2583BA8A001CADF9 /* KinoRate */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */,
+				5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */,
+				5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */,
+				5A9D9FC82583BC32001CADF9 /* Scene */,
+				5A9D9FD02583C065001CADF9 /* MainPages */,
+				5A9D9FF32583F1EB001CADF9 /* FilmsSub */,
+				5A9D9FF22583F1E3001CADF9 /* RatesSub */,
+				5A9D9FE12583E94A001CADF9 /* SettingsSub */,
+				5A9D9FBB2583BA8C001CADF9 /* Assets.xcassets */,
+				5A9D9FBD2583BA8C001CADF9 /* LaunchScreen.storyboard */,
+				5A9D9FC02583BA8C001CADF9 /* Info.plist */,
+				5A9D9FB82583BA8A001CADF9 /* KinoRate.xcdatamodeld */,
+			);
+			path = KinoRate;
+			sourceTree = "<group>";
+		};
+		5A9D9FC82583BC32001CADF9 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D9FB12583BA8A001CADF9 /* SceneDelegate.swift */,
+				5A9D9FCD2583BCAA001CADF9 /* SceneDelegateExtansion.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		5A9D9FD02583C065001CADF9 /* MainPages */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D9FD32583C093001CADF9 /* FilmsViewController.swift */,
+				5A9D9FD62583C09A001CADF9 /* RatesViewController.swift */,
+				5A9D9FD92583C0A0001CADF9 /* SettingsViewController.swift */,
+			);
+			path = MainPages;
+			sourceTree = "<group>";
+		};
+		5A9D9FE12583E94A001CADF9 /* SettingsSub */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D9FE72583E9BB001CADF9 /* SettingsSubViewController.swift */,
+				5A9D9FEA2583EA04001CADF9 /* AboutViewController.swift */,
+				5A8609662588E6B700D1CB8B /* ProfileViewController.swift */,
+			);
+			path = SettingsSub;
+			sourceTree = "<group>";
+		};
+		5A9D9FF22583F1E3001CADF9 /* RatesSub */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */,
+			);
+			path = RatesSub;
+			sourceTree = "<group>";
+		};
+		5A9D9FF32583F1EB001CADF9 /* FilmsSub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FilmsSub;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A9D9FAB2583BA8A001CADF9 /* KinoRate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A9D9FC32583BA8C001CADF9 /* Build configuration list for PBXNativeTarget "KinoRate" */;
+			buildPhases = (
+				5A9D9FA82583BA8A001CADF9 /* Sources */,
+				5A9D9FA92583BA8A001CADF9 /* Frameworks */,
+				5A9D9FAA2583BA8A001CADF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KinoRate;
+			productName = KinoRate;
+			productReference = 5A9D9FAC2583BA8A001CADF9 /* KinoRate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A9D9FA42583BA8A001CADF9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					5A9D9FAB2583BA8A001CADF9 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 5A9D9FA72583BA8A001CADF9 /* Build configuration list for PBXProject "KinoRate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A9D9FA32583BA89001CADF9;
+			productRefGroup = 5A9D9FAD2583BA8A001CADF9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A9D9FAB2583BA8A001CADF9 /* KinoRate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A9D9FAA2583BA8A001CADF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9D9FDD2583E698001CADF9 /* fichi.rtf in Resources */,
+				5A9D9FBF2583BA8C001CADF9 /* LaunchScreen.storyboard in Resources */,
+				5A9D9FBC2583BA8C001CADF9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A9D9FA82583BA8A001CADF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9D9FCE2583BCAA001CADF9 /* SceneDelegateExtansion.swift in Sources */,
+				5A9D9FB02583BA8A001CADF9 /* AppDelegate.swift in Sources */,
+				5A9D9FEE2583EB22001CADF9 /* TempDataSource.swift in Sources */,
+				5A9D9FDA2583C0A0001CADF9 /* SettingsViewController.swift in Sources */,
+				5A9D9FEB2583EA04001CADF9 /* AboutViewController.swift in Sources */,
+				5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */,
+				5A9D9FD42583C093001CADF9 /* FilmsViewController.swift in Sources */,
+				5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */,
+				5A9D9FE82583E9BB001CADF9 /* SettingsSubViewController.swift in Sources */,
+				5A9D9FBA2583BA8A001CADF9 /* KinoRate.xcdatamodeld in Sources */,
+				5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */,
+				5A9D9FD72583C09A001CADF9 /* RatesViewController.swift in Sources */,
+				5A9D9FB22583BA8A001CADF9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5A9D9FBD2583BA8C001CADF9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A9D9FBE2583BA8C001CADF9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A9D9FC12583BA8C001CADF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A9D9FC22583BA8C001CADF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A9D9FC42583BA8C001CADF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALVSY66ULS;
+				INFOPLIST_FILE = KinoRate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sdk.KinoRate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A9D9FC52583BA8C001CADF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALVSY66ULS;
+				INFOPLIST_FILE = KinoRate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = sdk.KinoRate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A9D9FA72583BA8A001CADF9 /* Build configuration list for PBXProject "KinoRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A9D9FC12583BA8C001CADF9 /* Debug */,
+				5A9D9FC22583BA8C001CADF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A9D9FC32583BA8C001CADF9 /* Build configuration list for PBXNativeTarget "KinoRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A9D9FC42583BA8C001CADF9 /* Debug */,
+				5A9D9FC52583BA8C001CADF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A9D9FB82583BA8A001CADF9 /* KinoRate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A9D9FB92583BA8A001CADF9 /* KinoRate.xcdatamodel */,
+			);
+			currentVersion = 5A9D9FB92583BA8A001CADF9 /* KinoRate.xcdatamodel */;
+			path = KinoRate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5A9D9FA42583BA8A001CADF9 /* Project object */;
+}

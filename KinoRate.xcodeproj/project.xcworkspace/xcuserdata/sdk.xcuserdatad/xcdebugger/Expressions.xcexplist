@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "RatesTableViewCell.confRateCell():RatesTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "starsValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "v1.unsafeMutableAddressor:TempDataSource.swift">
+      </ContextState>
+      <ContextState
+         contextName = "RatesViewController.tableView(_:cellForRowAt:):RatesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataSource[indexPath.row].stars">
+            </PersistentString>
+            <PersistentString
+               value = "cell.starsValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RatesViewController.viewDidLoad():RatesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataSource">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FilmsViewController.viewDidLoad():FilmsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataSource">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "mach_msg_trap:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataSource">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
