@@ -92,7 +92,6 @@ class FilmsViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         cell.filmName.text = filmSource[indexPath.row].filmName
         cell.filmText.text = filmSource[indexPath.row].filmText
         cell.separatorInset = .zero
-
         return cell
     }
     

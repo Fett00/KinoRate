@@ -55,7 +55,7 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         cell.confRateCell()
         cell.separatorInset = .zero
         
-
+        
         return cell
     }
 

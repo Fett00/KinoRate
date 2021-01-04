@@ -25,7 +25,6 @@
 		5A9D9FEE2583EB22001CADF9 /* TempDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */; };
 		5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */; };
 		5AA791CA2593DF68001756A9 /* FilmSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */; };
-		5ABB18652599F4240051984F /* ViewDidLoadLilExtantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB18642599F4240051984F /* ViewDidLoadLilExtantion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +48,6 @@
 		5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDataSource.swift; sourceTree = "<group>"; };
 		5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesTableViewCell.swift; sourceTree = "<group>"; };
 		5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSubTableViewCell.swift; sourceTree = "<group>"; };
-		5ABB18642599F4240051984F /* ViewDidLoadLilExtantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadLilExtantion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +83,6 @@
 			children = (
 				5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */,
 				5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */,
-				5ABB18642599F4240051984F /* ViewDidLoadLilExtantion.swift */,
 				5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */,
 				5A9D9FC82583BC32001CADF9 /* Scene */,
 				5A9D9FF32583F1EB001CADF9 /* Films */,
@@ -217,7 +214,6 @@
 				5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */,
 				5A9D9FD42583C093001CADF9 /* FilmsViewController.swift in Sources */,
 				5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */,
-				5ABB18652599F4240051984F /* ViewDidLoadLilExtantion.swift in Sources */,
 				5A9D9FE82583E9BB001CADF9 /* SettingsSubViewController.swift in Sources */,
 				5A9D9FBA2583BA8A001CADF9 /* KinoRate.xcdatamodeld in Sources */,
 				5AA791CA2593DF68001756A9 /* FilmSubTableViewCell.swift in Sources */,

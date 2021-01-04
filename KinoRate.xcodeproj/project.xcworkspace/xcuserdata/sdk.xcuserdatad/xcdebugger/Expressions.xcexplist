@@ -78,6 +78,9 @@
          contextName = "FilmsViewController.viewDidLoad():FilmsViewController.swift">
          <PersistentStrings>
             <PersistentString
+               value = "view.backgroundColor">
+            </PersistentString>
+            <PersistentString
                value = "dataSource">
             </PersistentString>
          </PersistentStrings>

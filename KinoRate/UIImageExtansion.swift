@@ -13,6 +13,7 @@ extension UIImage {
         
         let newImageSize = CGSize(width : firstImage.size.width + secondImage.size.width, height: firstImage.size.height + secondImage.size.height)
         
+        
         UIGraphicsBeginImageContextWithOptions(newImageSize, false, UIScreen.main.scale)
         
         let firstImageDrawX = round(0)
@@ -34,18 +35,22 @@ extension UIImage {
     static func createFiveStarsRating(_ fillStars: Int8) -> UIImage {
         
         var tempStars = UIImage()
+        let fillStar = UIImage(systemName: "star.fill")!
+        let emptyStar = UIImage(systemName: "star")!
+        
+        //fillStar.im
         
         if fillStars > 5{
             // TODO: вернуть ошибку если звезд больше пяти
         }
         for _ in 0..<fillStars{
 
-            tempStars = mergeTwoImage(firstImage: tempStars, withImage: UIImage(systemName: "star.fill")!)
+            tempStars = mergeTwoImage(firstImage: tempStars, withImage: fillStar)
         }
         
         for _ in fillStars..<5{
             
-            tempStars = mergeTwoImage(firstImage: tempStars, withImage: UIImage(systemName: "star")!)
+            tempStars = mergeTwoImage(firstImage: tempStars, withImage: emptyStar)
 
         }
         
