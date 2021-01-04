@@ -27,4 +27,29 @@ extension UIImage {
         return image!
         
     }
+    
+    /// Create image containing five star rating.
+    /// - Parameter fillStars: Number of fill stars
+    /// - Returns: Return  image, contains stars
+    static func createFiveStarsRating(_ fillStars: Int8) -> UIImage {
+        
+        var tempStars = UIImage()
+        
+        if fillStars > 5{
+            // TODO: вернуть ошибку если звезд больше пяти
+        }
+        for _ in 0..<fillStars{
+
+            tempStars = mergeTwoImage(firstImage: tempStars, withImage: UIImage(systemName: "star.fill")!)
+        }
+        
+        for _ in fillStars..<5{
+            
+            tempStars = mergeTwoImage(firstImage: tempStars, withImage: UIImage(systemName: "star")!)
+
+        }
+        
+        return tempStars
+        
+    }
 }

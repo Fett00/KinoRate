@@ -8,6 +8,7 @@
 import UIKit
 
 var dataSource = [Rate]()
+var filmSource = [Film]()
 
 class Rate {
     var filmName = ""
@@ -23,11 +24,35 @@ class Rate {
     }
 }
 
+class Film {
+    var poster:UIImage
+    var rate:UIImage
+    var filmName:String
+    var filmText:String
+    var date:String
+    var director:String
+    
+    init(poster:UIImage,rate:UIImage,filmName:String,filmText:String,date:String,director:String) {
+        self.poster =   poster
+        self.rate =     rate
+        self.filmName = filmName
+        self.filmText = filmText
+        self.date =     date
+        self.director = director
+    }
+}
+
 
 func genList(){
     
     for _ in 0...Int.random(in: 5...20){
         dataSource.append(Rate(v1[Int.random(in: 0..<v1.count)], v2[Int.random(in: 0..<v2.count)], v3[Int.random(in: 0..<v3.count)], Int8.random(in: 0...5)))
+    }
+    
+    let tempLable = "Dora & Ape"
+    
+    for _ in 0..<3{
+        filmSource.append(Film(poster: UIImage(named: "dora")!, rate: UIImage(named: "profileImage")!, filmName: tempLable, filmText: tempLable, date: tempLable, director: tempLable))
     }
 
 }

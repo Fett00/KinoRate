@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A725033259CEDD800BE16DB /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A725032259CEDD800BE16DB /* GeoViewController.swift */; };
 		5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */; };
 		5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609662588E6B700D1CB8B /* ProfileViewController.swift */; };
 		5A9D9FB02583BA8A001CADF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */; };
@@ -23,9 +24,12 @@
 		5A9D9FEB2583EA04001CADF9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FEA2583EA04001CADF9 /* AboutViewController.swift */; };
 		5A9D9FEE2583EB22001CADF9 /* TempDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */; };
 		5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */; };
+		5AA791CA2593DF68001756A9 /* FilmSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */; };
+		5ABB18652599F4240051984F /* ViewDidLoadLilExtantion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB18642599F4240051984F /* ViewDidLoadLilExtantion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A725032259CEDD800BE16DB /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
 		5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtansion.swift; sourceTree = "<group>"; };
 		5A8609662588E6B700D1CB8B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A9D9FAC2583BA8A001CADF9 /* KinoRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,12 +42,14 @@
 		5A9D9FCD2583BCAA001CADF9 /* SceneDelegateExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateExtansion.swift; sourceTree = "<group>"; };
 		5A9D9FD32583C093001CADF9 /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
 		5A9D9FD62583C09A001CADF9 /* RatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesViewController.swift; sourceTree = "<group>"; };
-		5A9D9FD92583C0A0001CADF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5A9D9FD92583C0A0001CADF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../MainPages/SettingsViewController.swift; sourceTree = "<group>"; };
 		5A9D9FDC2583E698001CADF9 /* fichi.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = fichi.rtf; sourceTree = "<group>"; };
 		5A9D9FE72583E9BB001CADF9 /* SettingsSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSubViewController.swift; sourceTree = "<group>"; };
 		5A9D9FEA2583EA04001CADF9 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDataSource.swift; sourceTree = "<group>"; };
 		5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesTableViewCell.swift; sourceTree = "<group>"; };
+		5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSubTableViewCell.swift; sourceTree = "<group>"; };
+		5ABB18642599F4240051984F /* ViewDidLoadLilExtantion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadLilExtantion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */,
-				5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */,
 				5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */,
+				5ABB18642599F4240051984F /* ViewDidLoadLilExtantion.swift */,
+				5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */,
 				5A9D9FC82583BC32001CADF9 /* Scene */,
-				5A9D9FD02583C065001CADF9 /* MainPages */,
-				5A9D9FF32583F1EB001CADF9 /* FilmsSub */,
-				5A9D9FF22583F1E3001CADF9 /* RatesSub */,
-				5A9D9FE12583E94A001CADF9 /* SettingsSub */,
+				5A9D9FF32583F1EB001CADF9 /* Films */,
+				5A9D9FF22583F1E3001CADF9 /* Rates */,
+				5A9D9FE12583E94A001CADF9 /* Settings */,
 				5A9D9FBB2583BA8C001CADF9 /* Assets.xcassets */,
 				5A9D9FBD2583BA8C001CADF9 /* LaunchScreen.storyboard */,
 				5A9D9FC02583BA8C001CADF9 /* Info.plist */,
@@ -102,39 +108,34 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		5A9D9FD02583C065001CADF9 /* MainPages */ = {
+		5A9D9FE12583E94A001CADF9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D9FD92583C0A0001CADF9 /* SettingsViewController.swift */,
+				5A8609662588E6B700D1CB8B /* ProfileViewController.swift */,
+				5A9D9FE72583E9BB001CADF9 /* SettingsSubViewController.swift */,
+				5A725032259CEDD800BE16DB /* GeoViewController.swift */,
+				5A9D9FEA2583EA04001CADF9 /* AboutViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5A9D9FF22583F1E3001CADF9 /* Rates */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D9FD62583C09A001CADF9 /* RatesViewController.swift */,
+				5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */,
+			);
+			path = Rates;
+			sourceTree = "<group>";
+		};
+		5A9D9FF32583F1EB001CADF9 /* Films */ = {
 			isa = PBXGroup;
 			children = (
 				5A9D9FD32583C093001CADF9 /* FilmsViewController.swift */,
-				5A9D9FD62583C09A001CADF9 /* RatesViewController.swift */,
-				5A9D9FD92583C0A0001CADF9 /* SettingsViewController.swift */,
+				5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */,
 			);
-			path = MainPages;
-			sourceTree = "<group>";
-		};
-		5A9D9FE12583E94A001CADF9 /* SettingsSub */ = {
-			isa = PBXGroup;
-			children = (
-				5A9D9FE72583E9BB001CADF9 /* SettingsSubViewController.swift */,
-				5A9D9FEA2583EA04001CADF9 /* AboutViewController.swift */,
-				5A8609662588E6B700D1CB8B /* ProfileViewController.swift */,
-			);
-			path = SettingsSub;
-			sourceTree = "<group>";
-		};
-		5A9D9FF22583F1E3001CADF9 /* RatesSub */ = {
-			isa = PBXGroup;
-			children = (
-				5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */,
-			);
-			path = RatesSub;
-			sourceTree = "<group>";
-		};
-		5A9D9FF32583F1EB001CADF9 /* FilmsSub */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FilmsSub;
+			path = Films;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,11 +213,14 @@
 				5A9D9FEE2583EB22001CADF9 /* TempDataSource.swift in Sources */,
 				5A9D9FDA2583C0A0001CADF9 /* SettingsViewController.swift in Sources */,
 				5A9D9FEB2583EA04001CADF9 /* AboutViewController.swift in Sources */,
+				5A725033259CEDD800BE16DB /* GeoViewController.swift in Sources */,
 				5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */,
 				5A9D9FD42583C093001CADF9 /* FilmsViewController.swift in Sources */,
 				5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */,
+				5ABB18652599F4240051984F /* ViewDidLoadLilExtantion.swift in Sources */,
 				5A9D9FE82583E9BB001CADF9 /* SettingsSubViewController.swift in Sources */,
 				5A9D9FBA2583BA8A001CADF9 /* KinoRate.xcdatamodeld in Sources */,
+				5AA791CA2593DF68001756A9 /* FilmSubTableViewCell.swift in Sources */,
 				5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */,
 				5A9D9FD72583C09A001CADF9 /* RatesViewController.swift in Sources */,
 				5A9D9FB22583BA8A001CADF9 /* SceneDelegate.swift in Sources */,
@@ -361,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ALVSY66ULS;
 				INFOPLIST_FILE = KinoRate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ALVSY66ULS;
 				INFOPLIST_FILE = KinoRate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

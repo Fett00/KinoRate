@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
 
         confPhoto()
         confNameLable()
@@ -24,23 +24,20 @@ class ProfileViewController: UIViewController {
     
     func confPhoto(){
         
-        // TODO: - НЕ закончена работа с изображением фиксированной велечины
         view.addSubview(photo)
-        let constantPhotoImage = UIImage(named: "profileImage")
-        let photoImage = UIImage(named: "profileImage2")
+        let photoImage = UIImage(named: "profileImage")
+        //let photoImage = UIImage(named: "profileImage2")
         
         photo.image = photoImage
-
-        photo.frame = CGRect(x: 0,y: 0,width: CGFloat((constantPhotoImage?.size.width)!), height: CGFloat((constantPhotoImage?.size.height)!))
-        photo.backgroundColor = .blue
         
-
         NSLayoutConstraint.activate([
+            photo.widthAnchor.constraint(equalToConstant: 160),
+            photo.heightAnchor.constraint(equalToConstant: 200),
             photo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             photo.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10)
         ])
         photo.translatesAutoresizingMaskIntoConstraints = false
-
+        
     }
     
     func confNameLable(){
@@ -49,7 +46,7 @@ class ProfileViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             nameLable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            nameLable.leadingAnchor.constraint(equalTo: photo.trailingAnchor,constant: 50)
+            nameLable.leadingAnchor.constraint(equalTo: photo.trailingAnchor,constant: 30)
         ])
         nameLable.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -61,7 +58,7 @@ class ProfileViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             registrationDate.topAnchor.constraint(equalTo: nameLable.bottomAnchor, constant: 10),
-            registrationDate.leadingAnchor.constraint(equalTo: photo.trailingAnchor,constant: 50)
+            registrationDate.leadingAnchor.constraint(equalTo: photo.trailingAnchor,constant: 30)
         ])
         registrationDate.translatesAutoresizingMaskIntoConstraints = false
     }

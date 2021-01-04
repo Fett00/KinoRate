@@ -20,7 +20,7 @@ class RatesTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        self.backgroundColor = .systemGray6
     }
     
     required init?(coder: NSCoder) {
@@ -28,21 +28,8 @@ class RatesTableViewCell: UITableViewCell {
     }
     
     public func confRateCell(){
-        
-        stars = UIImage()
-        
-        for _ in 0..<starsValue{
-            
-            stars = UIImage.mergeTwoImage(firstImage: stars, withImage: UIImage(systemName: "star.fill")!)
-        }
-        
-        for _ in starsValue..<5{
-            
-            stars = UIImage.mergeTwoImage(firstImage: stars, withImage: UIImage(systemName: "star")!)
 
-        }
-
-        starsView.image = stars
+        starsView.image = UIImage.createFiveStarsRating(starsValue)
         
         addSubview(filmName)
         addSubview(author)
@@ -55,18 +42,21 @@ class RatesTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
         
             filmName.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
-            filmName.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            filmName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             
-            comment.topAnchor.constraint(equalTo: filmName.bottomAnchor),
-            comment.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            
+            comment.topAnchor.constraint(equalTo: filmName.bottomAnchor, constant: 10),
+            comment.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
             comment.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
-            author.topAnchor.constraint(equalTo: comment.bottomAnchor,constant: 10),
-            author.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            author.topAnchor.constraint(greaterThanOrEqualTo: comment.bottomAnchor,constant: 10),
+            author.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
+            author.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -10),
             
-            starsView.topAnchor.constraint(equalTo: comment.bottomAnchor,constant: 10),
-            starsView.leadingAnchor.constraint(greaterThanOrEqualTo: author.trailingAnchor),
-            starsView.trailingAnchor.constraint(greaterThanOrEqualTo: self.trailingAnchor)
+            starsView.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
+            starsView.leadingAnchor.constraint(equalTo: filmName.trailingAnchor),
+            starsView.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10)
+            //starsView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         
         ])
         filmName.translatesAutoresizingMaskIntoConstraints = false

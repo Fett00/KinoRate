@@ -13,7 +13,7 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
         
         confRatesTableView()
     }
@@ -22,10 +22,10 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         view.addSubview(ratesTableView)
         
         NSLayoutConstraint.activate([
-            ratesTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            ratesTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 5),
-            ratesTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
-            ratesTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10)
+            ratesTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            ratesTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            ratesTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            ratesTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
         ratesTableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -33,7 +33,8 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         ratesTableView.register(RatesTableViewCell.self, forCellReuseIdentifier: "RatesCellID")
         ratesTableView.delegate = self
         ratesTableView.dataSource = self
-        ratesTableView.rowHeight = 100
+        ratesTableView.rowHeight = 130
+        ratesTableView.backgroundColor = .systemGray6
         ratesTableView.tableFooterView = UIView()
         
     }
@@ -43,12 +44,18 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
         let cell = ratesTableView.dequeueReusableCell(withIdentifier: "RatesCellID", for: indexPath) as! RatesTableViewCell
+        
+        cell.selectionStyle = .none
         cell.filmName.text = dataSource[indexPath.row].filmName
         cell.author.text = dataSource[indexPath.row].author
         cell.comment.text = dataSource[indexPath.row].comment
         cell.starsValue = dataSource[indexPath.row].stars
         cell.confRateCell()
+        cell.separatorInset = .zero
+        
+
         return cell
     }
 

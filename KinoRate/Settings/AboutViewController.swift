@@ -5,17 +5,20 @@
 //  Created by Садык Мусаев on 11.12.2020.
 //
 
-var aboutText = "Thanks for support us!\nYour help make us better.\n For donate us check up our website on page \"Support\"\n google.com"
+
+
 
 
 
 import UIKit
 
 class AboutViewController: UIViewController {
+    
+    var aboutText = "Thanks for support us!\nYour help make us better.\n For donate us check up our website \"Support\"\ngoogle.com"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemGray6
         
         let aboutLabel = UILabel()
         aboutLabel.text = aboutText
