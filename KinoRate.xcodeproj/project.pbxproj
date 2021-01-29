@@ -10,6 +10,7 @@
 		5A725033259CEDD800BE16DB /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A725032259CEDD800BE16DB /* GeoViewController.swift */; };
 		5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */; };
 		5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609662588E6B700D1CB8B /* ProfileViewController.swift */; };
+		5A86B56F25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A86B56E25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift */; };
 		5A9D9FB02583BA8A001CADF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */; };
 		5A9D9FB22583BA8A001CADF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FB12583BA8A001CADF9 /* SceneDelegate.swift */; };
 		5A9D9FBA2583BA8A001CADF9 /* KinoRate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FB82583BA8A001CADF9 /* KinoRate.xcdatamodeld */; };
@@ -31,6 +32,7 @@
 		5A725032259CEDD800BE16DB /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
 		5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtansion.swift; sourceTree = "<group>"; };
 		5A8609662588E6B700D1CB8B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5A86B56E25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsSubCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A9D9FAC2583BA8A001CADF9 /* KinoRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9D9FB12583BA8A001CADF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				5A9D9FD32583C093001CADF9 /* FilmsViewController.swift */,
+				5A86B56E25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift */,
 				5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */,
 			);
 			path = Films;
@@ -220,6 +223,7 @@
 				5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */,
 				5A9D9FD72583C09A001CADF9 /* RatesViewController.swift in Sources */,
 				5A9D9FB22583BA8A001CADF9 /* SceneDelegate.swift in Sources */,
+				5A86B56F25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

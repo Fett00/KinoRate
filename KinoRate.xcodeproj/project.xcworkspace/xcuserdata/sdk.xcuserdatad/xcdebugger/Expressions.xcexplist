@@ -3,10 +3,16 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "RatesViewController.viewDidLoad():RatesViewController.swift">
+         contextName = "RatesTableViewCell.confRateCell():RatesTableViewCell.swift">
          <PersistentStrings>
             <PersistentString
-               value = "dataSource">
+               value = "starsValue">
+            </PersistentString>
+            <PersistentString
+               value = "starsView">
+            </PersistentString>
+            <PersistentString
+               value = "starsView.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -33,23 +39,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "mach_msg_trap:(null)">
-         <PersistentStrings>
-            <PersistentString
-               value = "photo.frame">
-            </PersistentString>
-            <PersistentString
-               value = "dataSource">
-            </PersistentString>
-            <PersistentString
-               value = "constantPhotoImage">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "v1.unsafeMutableAddressor:TempDataSource.swift">
-      </ContextState>
-      <ContextState
          contextName = "ProfileViewController.viewDidLoad():ProfileViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -64,10 +53,30 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "v1.unsafeMutableAddressor:TempDataSource.swift">
+      </ContextState>
+      <ContextState
          contextName = "static UIImage.mergeTwoImage(firstImage:withImage:):UIImageExtansion.swift">
          <PersistentStrings>
             <PersistentString
-               value = "image.frame">
+               value = "firstImage.size.height">
+            </PersistentString>
+            <PersistentString
+               value = "secondImage.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "mach_msg_trap:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "photo.frame">
+            </PersistentString>
+            <PersistentString
+               value = "dataSource">
+            </PersistentString>
+            <PersistentString
+               value = "constantPhotoImage">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -86,13 +95,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "RatesTableViewCell.confRateCell():RatesTableViewCell.swift">
+         contextName = "RatesViewController.viewDidLoad():RatesViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "starsValue">
-            </PersistentString>
-            <PersistentString
-               value = "starsView.frame">
+               value = "dataSource">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

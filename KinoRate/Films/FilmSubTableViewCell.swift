@@ -41,12 +41,12 @@ class FilmSubTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             
             filmName.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            filmName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 10),
+            filmName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             filmName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             
             filmText.topAnchor.constraint(equalTo: filmName.bottomAnchor, constant: 10),
-            filmText.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 10),
-            filmText.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10)
+            filmText.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            filmText.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             
         ])
         

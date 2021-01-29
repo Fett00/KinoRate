@@ -10,6 +10,7 @@ import UIKit
 class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     let ratesTableView = UITableView()
+    let ratesSource = KinoData(type: .Rates)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +34,14 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         ratesTableView.register(RatesTableViewCell.self, forCellReuseIdentifier: "RatesCellID")
         ratesTableView.delegate = self
         ratesTableView.dataSource = self
-        ratesTableView.rowHeight = 130
+        ratesTableView.rowHeight = UITableView.automaticDimension//150
+        ratesTableView.estimatedRowHeight = 150
         ratesTableView.backgroundColor = .systemGray6
         ratesTableView.tableFooterView = UIView()
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        dataSource.count
+        ratesSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,13 +49,12 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let cell = ratesTableView.dequeueReusableCell(withIdentifier: "RatesCellID", for: indexPath) as! RatesTableViewCell
         
         cell.selectionStyle = .none
-        cell.filmName.text = dataSource[indexPath.row].filmName
-        cell.author.text = dataSource[indexPath.row].author
-        cell.comment.text = dataSource[indexPath.row].comment
-        cell.starsValue = dataSource[indexPath.row].stars
+        cell.filmName.text = (ratesSource[indexPath.row] as! KinoData.Rate).filmName
+        cell.author.text = (ratesSource[indexPath.row] as! KinoData.Rate).author
+        cell.comment.text = (ratesSource[indexPath.row] as! KinoData.Rate).comment
+        cell.starsValue = (ratesSource[indexPath.row] as! KinoData.Rate).stars
         cell.confRateCell()
         cell.separatorInset = .zero
-        
         
         return cell
     }

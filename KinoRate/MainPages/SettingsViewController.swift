@@ -46,30 +46,35 @@ class SettingsViewController: UIViewController,UITableViewDataSource,UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = settingsTableView.dequeueReusableCell(withIdentifier: "SettingsCellID", for: indexPath)
-        let cellImage = UIImageView()
+        //let cellImage = UIImageView()
     
         cell.backgroundColor = .systemGray6
-        cell.addSubview(cellImage)
+        //cell.addSubview(cellImage)
         switch indexPath.row{
         case 0:
-            cellImage.image = UIImage(systemName: "person")
+            //cellImage.image = UIImage(systemName: "person")
             cell.textLabel?.text = "Profile"
+            cell.imageView?.image = UIImage(systemName: "person")
         
         case 1:
-            cellImage.image = UIImage(systemName: "slider.horizontal.3")
+            //cellImage.image = UIImage(systemName: "slider.horizontal.3")
             cell.textLabel?.text = "Settings"
+            cell.imageView?.image = UIImage(systemName: "slider.horizontal.3")
         
         case 2:
-            cellImage.image = UIImage(systemName: "map")
+            //cellImage.image = UIImage(systemName: "map")
             cell.textLabel?.text = "Geo-IP"
+            cell.imageView?.image = UIImage(systemName: "map")
         
-
         case 3:
-            cellImage.image = UIImage(systemName: "info.circle")
+            //cellImage.image = UIImage(systemName: "info.circle")
             cell.textLabel?.text = "About&Support"
+            cell.imageView?.image = UIImage(systemName: "slider.horizontal.3")
+            
         default:
             break
         }
+        /*
         NSLayoutConstraint.activate([
         
             cellImage.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 10),
@@ -83,9 +88,10 @@ class SettingsViewController: UIViewController,UITableViewDataSource,UITableView
         
         
         cell.separatorInset = .init(top: 0, left: CGFloat(2*(10 + cellImage.frame.width + 10)), bottom: 0, right: 0)
+         
         cell.preservesSuperviewLayoutMargins = false // разобраться что делает
         cell.layoutMargins = UIEdgeInsets.zero // разобраться что делает
-        
+         */
         return cell
         
     }

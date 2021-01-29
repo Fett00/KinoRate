@@ -29,7 +29,6 @@ extension SceneDelegate{
     
     func createRootViewController() -> UIViewController {
         let tabBar = UITabBarController()
-        tabBar.tabBar.tintColor = .green
         tabBar.viewControllers = [Films(),Rates(),Settings()]
         return tabBar
     }

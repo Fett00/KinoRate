@@ -32,6 +32,7 @@ extension UIImage {
     /// Create image containing five star rating.
     /// - Parameter fillStars: Number of fill stars
     /// - Returns: Return  image, contains stars
+
     static func createFiveStarsRating(_ fillStars: Int8) -> UIImage {
         
         var tempStars = UIImage()
@@ -44,17 +45,40 @@ extension UIImage {
             // TODO: вернуть ошибку если звезд больше пяти
         }
         for _ in 0..<fillStars{
-
             tempStars = mergeTwoImage(firstImage: tempStars, withImage: fillStar)
         }
         
         for _ in fillStars..<5{
             
             tempStars = mergeTwoImage(firstImage: tempStars, withImage: emptyStar)
-
         }
         
         return tempStars
+    }
+
+
+    static func createFiveStarsRating2(_ fillStars: Int8) -> [UIImageView] {
         
+        var tempStarsView = [UIImageView]()
+        let fillStar = UIImage(systemName: "star.fill")!
+        let emptyStar = UIImage(systemName: "star")!
+        
+        
+        if fillStars > 5{
+            // TODO: вернуть ошибку если звезд больше пяти
+        }
+        for _ in 0..<fillStars{
+            let tempStar = UIImageView(image: fillStar)
+            //tempStar.translatesAutoresizingMaskIntoConstraints = false
+            tempStarsView.append(tempStar)
+        }
+        
+        for _ in fillStars..<5{
+            let tempStar = UIImageView(image: emptyStar)
+            //tempStar.translatesAutoresizingMaskIntoConstraints = false
+            tempStarsView.append(tempStar)
+        }
+        
+        return tempStarsView
     }
 }
