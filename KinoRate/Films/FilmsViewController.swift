@@ -26,7 +26,7 @@ class FilmsViewController: UIViewController, UICollectionViewDataSource, UIColle
         layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: self.view.safeAreaLayoutGuide.layoutFrame.width, height: self.view.safeAreaLayoutGuide.layoutFrame.height)
-        layout.estimatedItemSize = UICollectionView.layoutFittingExpandedSize
+        layout.estimatedItemSize = CGSize(width: 200, height: 400) //UICollectionView.layoutFittingExpandedSize
         filmsCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         
         view.addSubview(filmsCollectionView ?? UICollectionView())

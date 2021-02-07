@@ -14,12 +14,14 @@ class RatesTableViewCell: UITableViewCell {
     let author = UILabel()
     let comment = UILabel()
     var starsValue:Int8 = 0
-    var stars = UIImage()
     var starsView = [UIImageView]()
 
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.selectionStyle = .none
+        self.separatorInset = .zero
         self.backgroundColor = .systemGray6
     }
     
@@ -34,30 +36,27 @@ class RatesTableViewCell: UITableViewCell {
         addSubview(filmName)
         addSubview(author)
         addSubview(comment)
-        //addSubview(starsView)
+        
         for i in starsView{
             addSubview(i)
         }
         
         author.textColor = .systemGray
-        
+        comment.numberOfLines = 5
         
         filmName.font = UIFont(name: "Helvetica-bold", size: 20)
-        comment.numberOfLines = 0
-        
+        filmName.numberOfLines = 2
+        filmName.lineBreakMode = .byTruncatingTail
         
         NSLayoutConstraint.activate([
         
             filmName.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
             filmName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            filmName.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
             filmName.heightAnchor.constraint(equalTo: filmName.heightAnchor),
             
             author.topAnchor.constraint(equalTo: filmName.bottomAnchor,constant: 10),
             author.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            
-            //starsView.topAnchor.constraint(equalTo: filmName.bottomAnchor,constant: 10),
-            //starsView.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
-            //starsView.leadingAnchor.constraint(greaterThanOrEqualTo: author.trailingAnchor,constant: 10),
         ])
         
         for i in 0..<starsView.count{
@@ -82,19 +81,12 @@ class RatesTableViewCell: UITableViewCell {
             comment.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor,constant: -10)
         ])
         
-        
-        
         filmName.translatesAutoresizingMaskIntoConstraints = false
-        
         comment.translatesAutoresizingMaskIntoConstraints = false
-        
         author.translatesAutoresizingMaskIntoConstraints = false
         
         for i in starsView{
             i.translatesAutoresizingMaskIntoConstraints = false
         }
-        //starsView.translatesAutoresizingMaskIntoConstraints = false
     }
-    
-    
 }

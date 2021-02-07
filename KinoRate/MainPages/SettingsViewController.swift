@@ -18,7 +18,6 @@ class SettingsViewController: UIViewController,UITableViewDataSource,UITableView
         confSettingsTableView()
     }
     
-    
     func confSettingsTableView() {
         view.addSubview(settingsTableView)
         settingsTableView.tableFooterView = UIView()
@@ -34,10 +33,7 @@ class SettingsViewController: UIViewController,UITableViewDataSource,UITableView
         settingsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "SettingsCellID")
         settingsTableView.delegate = self
         settingsTableView.dataSource = self
-
-
-        
-        
+        settingsTableView.backgroundColor = .systemGray6
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,7 +65,7 @@ class SettingsViewController: UIViewController,UITableViewDataSource,UITableView
         case 3:
             //cellImage.image = UIImage(systemName: "info.circle")
             cell.textLabel?.text = "About&Support"
-            cell.imageView?.image = UIImage(systemName: "slider.horizontal.3")
+            cell.imageView?.image = UIImage(systemName: "info")
             
         default:
             break

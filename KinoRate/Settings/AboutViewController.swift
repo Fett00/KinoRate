@@ -23,8 +23,7 @@ class AboutViewController: UIViewController {
         let aboutLabel = UILabel()
         aboutLabel.text = aboutText
         aboutLabel.textAlignment = .center
-        
-        aboutLabel.numberOfLines = 10
+        aboutLabel.numberOfLines = 0
         
         view.addSubview(aboutLabel)
         

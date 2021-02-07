@@ -16,7 +16,7 @@ extension SceneDelegate{
     }
     func Rates() -> UIViewController {
         let rts = RatesViewController()
-        rts.tabBarItem = UITabBarItem(title: "My Rates", image: UIImage(systemName: "star.circle.fill"), tag: 1)
+        rts.tabBarItem = UITabBarItem(title: "Rates", image: UIImage(systemName: "star.circle.fill"), tag: 1)
         return UINavigationController(rootViewController: rts)
     }
     func Settings() -> UIViewController {

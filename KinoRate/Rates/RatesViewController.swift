@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     let ratesTableView = UITableView()
@@ -30,12 +31,13 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         ])
         ratesTableView.translatesAutoresizingMaskIntoConstraints = false
         
-        
         ratesTableView.register(RatesTableViewCell.self, forCellReuseIdentifier: "RatesCellID")
         ratesTableView.delegate = self
         ratesTableView.dataSource = self
         ratesTableView.rowHeight = UITableView.automaticDimension//150
-        ratesTableView.estimatedRowHeight = 150
+        ratesTableView.estimatedRowHeight = 208.5
+        ratesTableView.insetsContentViewsToSafeArea = true
+        ratesTableView.cellLayoutMarginsFollowReadableWidth = true
         ratesTableView.backgroundColor = .systemGray6
         ratesTableView.tableFooterView = UIView()
     }
@@ -48,16 +50,12 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             
         let cell = ratesTableView.dequeueReusableCell(withIdentifier: "RatesCellID", for: indexPath) as! RatesTableViewCell
         
-        cell.selectionStyle = .none
         cell.filmName.text = (ratesSource[indexPath.row] as! KinoData.Rate).filmName
         cell.author.text = (ratesSource[indexPath.row] as! KinoData.Rate).author
         cell.comment.text = (ratesSource[indexPath.row] as! KinoData.Rate).comment
         cell.starsValue = (ratesSource[indexPath.row] as! KinoData.Rate).stars
         cell.confRateCell()
-        cell.separatorInset = .zero
         
         return cell
     }
-
-
 }

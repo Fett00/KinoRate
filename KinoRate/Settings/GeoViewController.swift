@@ -11,7 +11,6 @@ import UIKit
 class GeoViewController: UIViewController {
     
     
-    
     let geoInfoLable = UILabel()
 
     override func viewDidLoad() {
@@ -21,7 +20,6 @@ class GeoViewController: UIViewController {
         
         confWeatherView()
         weatherFirstRespond()
-
     }
     
     func confWeatherView(){
@@ -34,7 +32,6 @@ class GeoViewController: UIViewController {
         
             geoInfoLable.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant: -80),
             geoInfoLable.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        
         ])
         
         geoInfoLable.translatesAutoresizingMaskIntoConstraints = false
@@ -46,10 +43,5 @@ class GeoViewController: UIViewController {
 //
 //        guard let apiUrl = URL(string: apiSite) else {return}
         
-        
-        
-        
     }
-
-
 }
