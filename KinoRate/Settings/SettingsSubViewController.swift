@@ -8,15 +8,9 @@
 import UIKit
 
 class SettingsSubViewController: UIViewController {
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGray6
         
     }
-    
-
-
 }

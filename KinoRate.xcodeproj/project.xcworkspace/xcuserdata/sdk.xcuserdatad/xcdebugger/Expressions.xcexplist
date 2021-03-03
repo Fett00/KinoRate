@@ -56,6 +56,23 @@
          contextName = "v1.unsafeMutableAddressor:TempDataSource.swift">
       </ContextState>
       <ContextState
+         contextName = "mach_msg_trap:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+            <PersistentString
+               value = "constantPhotoImage">
+            </PersistentString>
+            <PersistentString
+               value = "dataSource">
+            </PersistentString>
+            <PersistentString
+               value = "photo.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "static UIImage.mergeTwoImage(firstImage:withImage:):UIImageExtansion.swift">
          <PersistentStrings>
             <PersistentString
@@ -67,21 +84,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "mach_msg_trap:(null)">
-         <PersistentStrings>
-            <PersistentString
-               value = "photo.frame">
-            </PersistentString>
-            <PersistentString
-               value = "dataSource">
-            </PersistentString>
-            <PersistentString
-               value = "constantPhotoImage">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "SettingsViewController.tableView(_:cellForRowAt:):SettingsViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "SettingsViewController.tableView(_:cellForRowAt:):SettingsViewController.swift">
+         contextName = "CalculatorView.confView():CalculatorView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "workspaceLabel.frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.frame">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "FilmsViewController.viewDidLoad():FilmsViewController.swift">

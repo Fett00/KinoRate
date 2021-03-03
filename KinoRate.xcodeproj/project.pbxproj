@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5A725033259CEDD800BE16DB /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A725032259CEDD800BE16DB /* GeoViewController.swift */; };
+		5A74E16C25ED58E800CEE4A5 /* KinoRateDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A74E16A25ED58E800CEE4A5 /* KinoRateDB.xcdatamodeld */; };
+		5A74E17025ED597200CEE4A5 /* Comments+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74E16E25ED597200CEE4A5 /* Comments+CoreDataClass.swift */; };
+		5A74E17125ED597200CEE4A5 /* Comments+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74E16F25ED597200CEE4A5 /* Comments+CoreDataProperties.swift */; };
 		5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */; };
 		5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609662588E6B700D1CB8B /* ProfileViewController.swift */; };
 		5A86B56F25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A86B56E25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift */; };
+		5A8D4DD525DEFEEA000A8C6B /* CreateRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D4DD425DEFEEA000A8C6B /* CreateRateViewController.swift */; };
+		5A91687925E1AAE1005C4F4F /* WorkWithDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91687825E1AAE1005C4F4F /* WorkWithDB.swift */; };
 		5A9D9FB02583BA8A001CADF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */; };
 		5A9D9FB22583BA8A001CADF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FB12583BA8A001CADF9 /* SceneDelegate.swift */; };
-		5A9D9FBA2583BA8A001CADF9 /* KinoRate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FB82583BA8A001CADF9 /* KinoRate.xcdatamodeld */; };
 		5A9D9FBC2583BA8C001CADF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9D9FBB2583BA8C001CADF9 /* Assets.xcassets */; };
 		5A9D9FBF2583BA8C001CADF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9D9FBD2583BA8C001CADF9 /* LaunchScreen.storyboard */; };
 		5A9D9FCE2583BCAA001CADF9 /* SceneDelegateExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FCD2583BCAA001CADF9 /* SceneDelegateExtansion.swift */; };
@@ -26,17 +30,24 @@
 		5A9D9FEE2583EB22001CADF9 /* TempDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */; };
 		5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */; };
 		5AA791CA2593DF68001756A9 /* FilmSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */; };
+		5ABD43C525D179AB0036A902 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABD43C425D179AB0036A902 /* CalculatorViewController.swift */; };
+		5ABD43C825D17A070036A902 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABD43C725D17A070036A902 /* CalculatorLogic.swift */; };
+		5ABD43CB25D17E900036A902 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABD43CA25D17E900036A902 /* CalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A725032259CEDD800BE16DB /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
+		5A74E16B25ED58E800CEE4A5 /* KinoRateDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KinoRateDB.xcdatamodel; sourceTree = "<group>"; };
+		5A74E16E25ED597200CEE4A5 /* Comments+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comments+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5A74E16F25ED597200CEE4A5 /* Comments+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comments+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtansion.swift; sourceTree = "<group>"; };
 		5A8609662588E6B700D1CB8B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A86B56E25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsSubCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A8D4DD425DEFEEA000A8C6B /* CreateRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRateViewController.swift; sourceTree = "<group>"; };
+		5A91687825E1AAE1005C4F4F /* WorkWithDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkWithDB.swift; sourceTree = "<group>"; };
 		5A9D9FAC2583BA8A001CADF9 /* KinoRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9D9FB12583BA8A001CADF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5A9D9FB92583BA8A001CADF9 /* KinoRate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KinoRate.xcdatamodel; sourceTree = "<group>"; };
 		5A9D9FBB2583BA8C001CADF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A9D9FBE2583BA8C001CADF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9D9FC02583BA8C001CADF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +61,9 @@
 		5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDataSource.swift; sourceTree = "<group>"; };
 		5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesTableViewCell.swift; sourceTree = "<group>"; };
 		5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSubTableViewCell.swift; sourceTree = "<group>"; };
+		5ABD43C425D179AB0036A902 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		5ABD43C725D17A070036A902 /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
+		5ABD43CA25D17E900036A902 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +80,11 @@
 		5A9D9FA32583BA89001CADF9 = {
 			isa = PBXGroup;
 			children = (
+				5A74E16E25ED597200CEE4A5 /* Comments+CoreDataClass.swift */,
+				5A74E16F25ED597200CEE4A5 /* Comments+CoreDataProperties.swift */,
+				5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */,
 				5A9D9FDC2583E698001CADF9 /* fichi.rtf */,
+				5A91687825E1AAE1005C4F4F /* WorkWithDB.swift */,
 				5A9D9FAE2583BA8A001CADF9 /* KinoRate */,
 				5A9D9FAD2583BA8A001CADF9 /* Products */,
 			);
@@ -83,17 +101,17 @@
 		5A9D9FAE2583BA8A001CADF9 /* KinoRate */ = {
 			isa = PBXGroup;
 			children = (
-				5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */,
 				5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */,
 				5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */,
 				5A9D9FC82583BC32001CADF9 /* Scene */,
 				5A9D9FF32583F1EB001CADF9 /* Films */,
 				5A9D9FF22583F1E3001CADF9 /* Rates */,
 				5A9D9FE12583E94A001CADF9 /* Settings */,
+				5ABD43C325D179630036A902 /* Calculator */,
 				5A9D9FBB2583BA8C001CADF9 /* Assets.xcassets */,
 				5A9D9FBD2583BA8C001CADF9 /* LaunchScreen.storyboard */,
 				5A9D9FC02583BA8C001CADF9 /* Info.plist */,
-				5A9D9FB82583BA8A001CADF9 /* KinoRate.xcdatamodeld */,
+				5A74E16A25ED58E800CEE4A5 /* KinoRateDB.xcdatamodeld */,
 			);
 			path = KinoRate;
 			sourceTree = "<group>";
@@ -124,6 +142,7 @@
 			children = (
 				5A9D9FD62583C09A001CADF9 /* RatesViewController.swift */,
 				5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */,
+				5A8D4DD425DEFEEA000A8C6B /* CreateRateViewController.swift */,
 			);
 			path = Rates;
 			sourceTree = "<group>";
@@ -136,6 +155,16 @@
 				5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */,
 			);
 			path = Films;
+			sourceTree = "<group>";
+		};
+		5ABD43C325D179630036A902 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				5ABD43C425D179AB0036A902 /* CalculatorViewController.swift */,
+				5ABD43CA25D17E900036A902 /* CalculatorView.swift */,
+				5ABD43C725D17A070036A902 /* CalculatorLogic.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,20 +239,27 @@
 			files = (
 				5A9D9FCE2583BCAA001CADF9 /* SceneDelegateExtansion.swift in Sources */,
 				5A9D9FB02583BA8A001CADF9 /* AppDelegate.swift in Sources */,
+				5ABD43CB25D17E900036A902 /* CalculatorView.swift in Sources */,
+				5A74E17125ED597200CEE4A5 /* Comments+CoreDataProperties.swift in Sources */,
+				5A91687925E1AAE1005C4F4F /* WorkWithDB.swift in Sources */,
+				5ABD43C825D17A070036A902 /* CalculatorLogic.swift in Sources */,
 				5A9D9FEE2583EB22001CADF9 /* TempDataSource.swift in Sources */,
 				5A9D9FDA2583C0A0001CADF9 /* SettingsViewController.swift in Sources */,
 				5A9D9FEB2583EA04001CADF9 /* AboutViewController.swift in Sources */,
 				5A725033259CEDD800BE16DB /* GeoViewController.swift in Sources */,
+				5A8D4DD525DEFEEA000A8C6B /* CreateRateViewController.swift in Sources */,
+				5A74E16C25ED58E800CEE4A5 /* KinoRateDB.xcdatamodeld in Sources */,
 				5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */,
 				5A9D9FD42583C093001CADF9 /* FilmsViewController.swift in Sources */,
 				5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */,
 				5A9D9FE82583E9BB001CADF9 /* SettingsSubViewController.swift in Sources */,
-				5A9D9FBA2583BA8A001CADF9 /* KinoRate.xcdatamodeld in Sources */,
 				5AA791CA2593DF68001756A9 /* FilmSubTableViewCell.swift in Sources */,
 				5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */,
+				5A74E17025ED597200CEE4A5 /* Comments+CoreDataClass.swift in Sources */,
 				5A9D9FD72583C09A001CADF9 /* RatesViewController.swift in Sources */,
 				5A9D9FB22583BA8A001CADF9 /* SceneDelegate.swift in Sources */,
 				5A86B56F25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift in Sources */,
+				5ABD43C525D179AB0036A902 /* CalculatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,13 +457,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5A9D9FB82583BA8A001CADF9 /* KinoRate.xcdatamodeld */ = {
+		5A74E16A25ED58E800CEE4A5 /* KinoRateDB.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5A9D9FB92583BA8A001CADF9 /* KinoRate.xcdatamodel */,
+				5A74E16B25ED58E800CEE4A5 /* KinoRateDB.xcdatamodel */,
 			);
-			currentVersion = 5A9D9FB92583BA8A001CADF9 /* KinoRate.xcdatamodel */;
-			path = KinoRate.xcdatamodeld;
+			currentVersion = 5A74E16B25ED58E800CEE4A5 /* KinoRateDB.xcdatamodel */;
+			path = KinoRateDB.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

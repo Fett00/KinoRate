@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController {
         confNameLable()
         confRegistrationDate()
     }
-    
+
     func confPhoto(){
         
         view.addSubview(photo)
