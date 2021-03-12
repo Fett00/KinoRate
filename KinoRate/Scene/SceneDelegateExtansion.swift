@@ -25,15 +25,9 @@ extension SceneDelegate{
         return UINavigationController(rootViewController: sett)
     }
     
-    func Calculator() -> UIViewController {
-        let calc = CalculatorViewController()
-        calc.tabBarItem = UITabBarItem(title: "Calculator", image: UIImage(systemName: "keyboard"), tag: 3)
-        return calc
-    }
-    
     func createRootViewController() -> UIViewController {
         let tabBar = UITabBarController()
-        tabBar.viewControllers = [Films(),Rates(),Settings(),Calculator()]
+        tabBar.viewControllers = [Films(),Rates(),Settings()]
         return tabBar
     }
     

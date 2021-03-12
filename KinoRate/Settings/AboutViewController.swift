@@ -14,7 +14,7 @@ import UIKit
 
 class AboutViewController: UIViewController {
     
-    var aboutText = "Thanks for support us!\nYour help make us better.\n For donate us check up our website \"Support\"\ngoogle.com"
+    var aboutText = "Thanks for support us!\nYour help make us better.\n For donate check up our website \"Support\"\ngoogle.com"
 
     override func viewDidLoad() {
         super.viewDidLoad()

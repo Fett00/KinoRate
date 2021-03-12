@@ -12,6 +12,7 @@ class GeoViewController: UIViewController {
     
     
     let geoInfoLable = UILabel()
+    var jsonRespond:NSDictionary = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,8 @@ class GeoViewController: UIViewController {
         view.backgroundColor = .systemGray6
         
         confWeatherView()
-        weatherFirstRespond()
+        geoIpRespond()
+        viewJsonRespond()
     }
     
     func confWeatherView(){
@@ -37,11 +39,32 @@ class GeoViewController: UIViewController {
         geoInfoLable.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func weatherFirstRespond(){
+    func geoIpRespond(){
+        //https://jsonplaceholder.typicode.com/posts/1
+        //https://api.2ip.ua/geo.json?ip=
         
-//        let apiSite = "https://api.2ip.ua/geo.json?ip=" // Вызов API с пустым параметром "ip" вернет информацию об IP адресе, с которого происходит обращение.
-//
-//        guard let apiUrl = URL(string: apiSite) else {return}
+        guard let urlRequest = URL(string: "https://jsonplaceholder.typicode.com/posts/1") else{ return }
+        let session = URLSession.shared
         
+        let task = session.dataTask(with: urlRequest) { [self] (data, response, error) in
+
+            if error != nil {
+                print(error as Any)
+                return
+            }
+
+            do {
+                jsonRespond = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
+                print("---------------\n",type(of: jsonRespond),"\n---------------\n")
+                print(jsonRespond)
+            } catch {
+                print("Error JSON serialization: \(error.localizedDescription)")
+            }
+        }.resume()
+
+    }
+    
+    func viewJsonRespond()  {
+        print(jsonRespond.allKeys)
     }
 }

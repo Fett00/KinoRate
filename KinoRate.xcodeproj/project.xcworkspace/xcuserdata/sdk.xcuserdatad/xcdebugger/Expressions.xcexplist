@@ -3,20 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "RatesTableViewCell.confRateCell():RatesTableViewCell.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "starsValue">
-            </PersistentString>
-            <PersistentString
-               value = "starsView">
-            </PersistentString>
-            <PersistentString
-               value = "starsView.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "FilmsViewController.tableView(_:cellForRowAt:):FilmsViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -24,6 +10,17 @@
             </PersistentString>
             <PersistentString
                value = "filmSource[indexPath.row].filmText.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CalculatorView.confView():CalculatorView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "workspaceLabel.frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -39,28 +36,11 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ProfileViewController.viewDidLoad():ProfileViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "((UIImage(named: &quot;profileImage&quot;)?.size.width)!)">
-            </PersistentString>
-            <PersistentString
-               value = "photo.frame">
-            </PersistentString>
-            <PersistentString
-               value = "((UIImage(named: &quot;profileImage&quot;)?.size.height)!)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "v1.unsafeMutableAddressor:TempDataSource.swift">
+         contextName = "SettingsViewController.tableView(_:cellForRowAt:):SettingsViewController.swift">
       </ContextState>
       <ContextState
          contextName = "mach_msg_trap:(null)">
          <PersistentStrings>
-            <PersistentString
-               value = "">
-            </PersistentString>
             <PersistentString
                value = "constantPhotoImage">
             </PersistentString>
@@ -68,7 +48,29 @@
                value = "dataSource">
             </PersistentString>
             <PersistentString
+               value = "response">
+            </PersistentString>
+            <PersistentString
                value = "photo.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GeoViewController.geoIpRespond():GeoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "JSONSerialization.jsonObject(with: data!, options: [])">
+            </PersistentString>
+            <PersistentString
+               value = "jsonRespond">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RatesViewController.viewDidLoad():RatesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataSource">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -84,20 +86,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SettingsViewController.tableView(_:cellForRowAt:):SettingsViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "CalculatorView.confView():CalculatorView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "workspaceLabel.frame">
-            </PersistentString>
-            <PersistentString
-               value = "self.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "FilmsViewController.viewDidLoad():FilmsViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -109,10 +97,41 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "RatesViewController.viewDidLoad():RatesViewController.swift">
+         contextName = "RatesTableViewCell.confRateCell():RatesTableViewCell.swift">
          <PersistentStrings>
             <PersistentString
-               value = "dataSource">
+               value = "starsValue">
+            </PersistentString>
+            <PersistentString
+               value = "starsView">
+            </PersistentString>
+            <PersistentString
+               value = "starsView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GeoViewController.viewJsonRespond():GeoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "jsonRespond">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "v1.unsafeMutableAddressor:TempDataSource.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.viewDidLoad():ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "((UIImage(named: &quot;profileImage&quot;)?.size.width)!)">
+            </PersistentString>
+            <PersistentString
+               value = "photo.frame">
+            </PersistentString>
+            <PersistentString
+               value = "((UIImage(named: &quot;profileImage&quot;)?.size.height)!)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

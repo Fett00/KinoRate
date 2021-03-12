@@ -10,17 +10,17 @@ import UIKit
 
 class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let rateDBOperations = RatesDB()
+    
     var dataComments = [Comments]()
     
     let ratesTableView = UITableView()
-    let ratesSource = KinoData(type: .Rates)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
-        updateDataBase()
         navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .add, target: self, action: #selector(createRate))
+        
         confRatesTableView()
     }
     
@@ -47,8 +47,8 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         ratesTableView.estimatedRowHeight = 208.5
         ratesTableView.insetsContentViewsToSafeArea = true
         ratesTableView.cellLayoutMarginsFollowReadableWidth = true
-        ratesTableView.backgroundColor = .systemGray6
-        ratesTableView.tableFooterView = UIView()
+        ratesTableView.backgroundColor = .systemGray6 // Устанавливает цвет задника для таблицы
+        ratesTableView.tableFooterView = UIView() // Убирает пустые ячейки
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,15 +75,7 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let swipeAction = UIContextualAction(style: .destructive, title: "Delete"){ (swipeAction,view,completationHandler) in
             
             let commentToRemove = self.dataComments[indexPath.row]
-            
-            self.context.delete(commentToRemove)
-            
-            do {
-                try self.context.save()
-            } catch  {
-                
-            }
-            
+            self.rateDBOperations.delete(dataForRemove: commentToRemove)
             self.updateDataBase()
         }
         
@@ -91,16 +83,10 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     }
     
     func updateDataBase() {
-        
-        do {
-            dataComments = try context.fetch(Comments.fetchRequest())
-            ratesTableView.reloadData()
+        dataComments = rateDBOperations.get {
             DispatchQueue.main.async {
                 self.ratesTableView.reloadData()
             }
-            
-        } catch {
-            return
         }
     }
     

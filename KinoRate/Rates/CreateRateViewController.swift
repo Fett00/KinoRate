@@ -9,8 +9,8 @@ import UIKit
 
 class CreateRateViewController: UIViewController {
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+    let rateDBOperations = RatesDB()
+    
     let containerText = UIStackView()
     
     let authorTextView = UITextField()
@@ -29,32 +29,33 @@ class CreateRateViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
         navigationItem.rightBarButtonItem = .init(title:"Add", style: .plain, target: self, action: #selector(confirmRate))
+        
         confView()
     }
     
     @objc func confirmRate(){
-        let newComment = Comments(context: self.context)
-        newComment.comment = commentTextView.text
-        newComment.filmID = filmNameTextView.text
-        newComment.userID = authorTextView.text
-        newComment.id = "1"
         
-        if let stars = Int32(starsValueTextView.text ?? ""){
-            if stars < 0 {
-                newComment.rating = 0
-            }
-            else if stars > 5{
-                newComment.rating = 5
-            }
-            else{
-                newComment.rating = stars
+        rateDBOperations.create {
+            
+            let newComment = Comments(context: rateDBOperations.context)
+            newComment.comment = commentTextView.text
+            newComment.filmID = filmNameTextView.text
+            newComment.userID = authorTextView.text
+            newComment.id = "1"
+            
+            if let stars = Int32(starsValueTextView.text ?? ""){
+                if stars < 0 {
+                    newComment.rating = 0
+                }
+                else if stars > 5{
+                    newComment.rating = 5
+                }
+                else{
+                    newComment.rating = stars
+                }
             }
         }
         
-        do {
-            try self.context.save()
-        } catch  {
-        }
         navigationController?.popToRootViewController(animated: true)
     }
     
@@ -72,9 +73,9 @@ class CreateRateViewController: UIViewController {
         containerLable.addArrangedSubview(starsValueLable)
         containerLable.addArrangedSubview(commentLable)
         
-//        authorTextView.contentVerticalAlignment = .top
-//        filmNameTextView.contentVerticalAlignment = .top
-//        starsValueTextView.contentVerticalAlignment = .top
+        //        authorTextView.contentVerticalAlignment = .top
+        //        filmNameTextView.contentVerticalAlignment = .top
+        //        starsValueTextView.contentVerticalAlignment = .top
         
         authorLable.text = "Автор"
         commentLable.text = "Коментарий"
@@ -84,7 +85,7 @@ class CreateRateViewController: UIViewController {
         authorTextView.borderStyle = .roundedRect
         filmNameTextView.borderStyle = .roundedRect
         starsValueTextView.borderStyle = .roundedRect
-            
+        
         commentTextView.textContainer.maximumNumberOfLines = 5
         //commentTextView.isScrollEnabled = false
         starsValueTextView.keyboardType = .numberPad
@@ -101,8 +102,8 @@ class CreateRateViewController: UIViewController {
         containerLable.spacing = .leastNormalMagnitude
         containerLable.contentMode = .scaleAspectFit
         
-//        containerText.backgroundColor = .blue
-//        containerLable.backgroundColor = .cyan
+        //        containerText.backgroundColor = .blue
+        //        containerLable.backgroundColor = .cyan
         
         NSLayoutConstraint.activate([
             
