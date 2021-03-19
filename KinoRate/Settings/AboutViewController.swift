@@ -36,7 +36,4 @@ class AboutViewController: UIViewController {
         ])
         aboutLabel.translatesAutoresizingMaskIntoConstraints = false
     }
-    
-
-
 }

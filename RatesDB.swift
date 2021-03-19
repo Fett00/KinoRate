@@ -12,33 +12,35 @@ class RatesDB{
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    private func save(){
+    private func save(){ //Сохранение Данных в БД
         do {
             try self.context.save()
-        } catch  {/*Добавить вывод ошибки*/}
+        }
+        catch  {/*Добавить вывод ошибки*/}
     }
     
-    func delete(dataForRemove:NSManagedObject){
+    func delete(dataForRemove:NSManagedObject){ //Удаление данных из БД
         self.context.delete(dataForRemove)
         self.save()
     }
     
-    func create(createNewObject: ()->()) {
+    func create(createNewObject: ()->()) { //Создание новой записи в БД
+        createNewObject()
         save()
     }
     
-    func update(){
+    func update(){ //Обновление записи из БД
             
     }
     
-    func get(handler: ()->()) -> [Comments]{
+    func get(handler: ()->()) -> [Comments]{ //Получение всех записей из БД
         do {
             let tempData:[Comments] = try context.fetch(Comments.fetchRequest())
             handler()
             return tempData
-        } catch {
+        }
+        catch {
             return []
         }
     }
-    
 }

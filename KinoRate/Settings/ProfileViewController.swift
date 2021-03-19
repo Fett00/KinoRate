@@ -37,7 +37,6 @@ class ProfileViewController: UIViewController {
             photo.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10)
         ])
         photo.translatesAutoresizingMaskIntoConstraints = false
-        
     }
     
     func confNameLable(){
@@ -62,5 +61,4 @@ class ProfileViewController: UIViewController {
         ])
         registrationDate.translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2CF5A12604BE86003441AB /* SettingsTableViewCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CF5A02604BE86003441AB /* SettingsTableViewCellContent.swift */; };
 		5A725033259CEDD800BE16DB /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A725032259CEDD800BE16DB /* GeoViewController.swift */; };
 		5A74E16C25ED58E800CEE4A5 /* KinoRateDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A74E16A25ED58E800CEE4A5 /* KinoRateDB.xcdatamodeld */; };
 		5A74E17025ED597200CEE4A5 /* Comments+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A74E16E25ED597200CEE4A5 /* Comments+CoreDataClass.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A2CF5A02604BE86003441AB /* SettingsTableViewCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCellContent.swift; sourceTree = "<group>"; };
 		5A725032259CEDD800BE16DB /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
 		5A74E16B25ED58E800CEE4A5 /* KinoRateDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KinoRateDB.xcdatamodel; sourceTree = "<group>"; };
 		5A74E16E25ED597200CEE4A5 /* Comments+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comments+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5A9D9FD92583C0A0001CADF9 /* SettingsViewController.swift */,
+				5A2CF5A02604BE86003441AB /* SettingsTableViewCellContent.swift */,
 				5A8609662588E6B700D1CB8B /* ProfileViewController.swift */,
 				5A9D9FE72583E9BB001CADF9 /* SettingsSubViewController.swift */,
 				5A725032259CEDD800BE16DB /* GeoViewController.swift */,
@@ -224,6 +227,7 @@
 				5A9D9FDA2583C0A0001CADF9 /* SettingsViewController.swift in Sources */,
 				5A9D9FEB2583EA04001CADF9 /* AboutViewController.swift in Sources */,
 				5A725033259CEDD800BE16DB /* GeoViewController.swift in Sources */,
+				5A2CF5A12604BE86003441AB /* SettingsTableViewCellContent.swift in Sources */,
 				5A8D4DD525DEFEEA000A8C6B /* CreateRateViewController.swift in Sources */,
 				5A74E16C25ED58E800CEE4A5 /* KinoRateDB.xcdatamodeld in Sources */,
 				5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */,
