@@ -9,34 +9,40 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    var photo = UIImageView()
+    var avatar = UIImageView()
     var nameLable = UILabel()
     var registrationDate = UILabel()
+    var changeAvatarButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
 
-        confPhoto()
+        //Настройка аватарки
+        confAvatar()
+        //Настройка лейбла с именем
         confNameLable()
+        //Настройка лейбла с датой
         confRegistrationDate()
+        //Настройка кнопки смены аватара
+        confChangeAvatarButton()
     }
 
-    func confPhoto(){
+    func confAvatar(){
         
-        view.addSubview(photo)
+        view.addSubview(avatar)
         let photoImage = UIImage(named: "profileImage")
         //let photoImage = UIImage(named: "profileImage2")
         
-        photo.image = photoImage
+        avatar.image = photoImage
         
         NSLayoutConstraint.activate([
-            photo.widthAnchor.constraint(equalToConstant: 160),
-            photo.heightAnchor.constraint(equalToConstant: 200),
-            photo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            photo.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10)
+            avatar.widthAnchor.constraint(equalToConstant: 160),
+            avatar.heightAnchor.constraint(equalToConstant: 200),
+            avatar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            avatar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10)
         ])
-        photo.translatesAutoresizingMaskIntoConstraints = false
+        avatar.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func confNameLable(){
@@ -45,7 +51,7 @@ class ProfileViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             nameLable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            nameLable.leadingAnchor.constraint(equalTo: photo.trailingAnchor,constant: 30)
+            nameLable.leadingAnchor.constraint(equalTo: avatar.trailingAnchor,constant: 30)
         ])
         nameLable.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -57,8 +63,39 @@ class ProfileViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             registrationDate.topAnchor.constraint(equalTo: nameLable.bottomAnchor, constant: 10),
-            registrationDate.leadingAnchor.constraint(equalTo: photo.trailingAnchor,constant: 30)
+            registrationDate.leadingAnchor.constraint(equalTo: avatar.trailingAnchor,constant: 30)
         ])
         registrationDate.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func confChangeAvatarButton() {
+        view.addSubview(changeAvatarButton)
+        //Добавление действия на нажатие
+        changeAvatarButton.addTarget(self, action: #selector(callAlert), for: .touchDown)
+        
+        //Настройка внешнего вида
+        changeAvatarButton.setTitle("Change", for: .normal)
+        changeAvatarButton.setTitleColor(.systemBlue, for: .normal)
+
+        
+        NSLayoutConstraint.activate([
+            changeAvatarButton.topAnchor.constraint(equalTo: avatar.bottomAnchor, constant: 10),
+            changeAvatarButton.trailingAnchor.constraint(equalTo: avatar.trailingAnchor),
+            changeAvatarButton.widthAnchor.constraint(equalTo: avatar.widthAnchor)
+        ])
+        
+        changeAvatarButton.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    //Создание и вызов окна уведомления смены аватара
+    @objc func callAlert(){
+        let alert = UIAlertController(title: nil, message: "Change a avatar", preferredStyle: .alert)
+        alert.addAction(.init(title: "Face", style: .default, handler: { (_) in
+            self.avatar.image = UIImage(named: "profileImage")
+        }))
+        alert.addAction(.init(title: "Eye", style: .default, handler: { (_) in
+            self.avatar.image = UIImage(named: "profileImage2")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }

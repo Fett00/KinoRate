@@ -19,12 +19,12 @@ class GeoViewController: UIViewController {
         
         view.backgroundColor = .systemGray6
         
-        confWeatherView()
+        confGeoView()
         geoIpRespond()
         viewJsonRespond()
     }
     
-    func confWeatherView(){
+    func confGeoView(){
         
         view.addSubview(geoInfoLable)
         
@@ -46,7 +46,7 @@ class GeoViewController: UIViewController {
         guard let urlRequest = URL(string: "https://jsonplaceholder.typicode.com/posts/1") else{ return }
         let session = URLSession.shared
         
-        let task = session.dataTask(with: urlRequest) { [self] (data, response, error) in
+        session.dataTask(with: urlRequest) { (data, response, error) in
 
             if error != nil {
                 print(error as Any)
@@ -54,9 +54,9 @@ class GeoViewController: UIViewController {
             }
 
             do {
-                jsonRespond = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
-                print("---------------\n",type(of: jsonRespond),"\n---------------\n")
-                print(jsonRespond)
+                self.jsonRespond = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
+                print("---------------\n",type(of: self.jsonRespond),"\n---------------\n")
+                print(self.jsonRespond)
             } catch {
                 print("Error JSON serialization: \(error.localizedDescription)")
             }

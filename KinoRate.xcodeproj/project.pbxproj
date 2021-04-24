@@ -29,7 +29,6 @@
 		5A9D9FEB2583EA04001CADF9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FEA2583EA04001CADF9 /* AboutViewController.swift */; };
 		5A9D9FEE2583EB22001CADF9 /* TempDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */; };
 		5A9D9FF62583F325001CADF9 /* RatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */; };
-		5AA791CA2593DF68001756A9 /* FilmSubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +56,6 @@
 		5A9D9FEA2583EA04001CADF9 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		5A9D9FED2583EB22001CADF9 /* TempDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDataSource.swift; sourceTree = "<group>"; };
 		5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesTableViewCell.swift; sourceTree = "<group>"; };
-		5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSubTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +143,6 @@
 			children = (
 				5A9D9FD32583C093001CADF9 /* FilmsViewController.swift */,
 				5A86B56E25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift */,
-				5AA791C92593DF68001756A9 /* FilmSubTableViewCell.swift */,
 			);
 			path = Films;
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 				5A9D9FD42583C093001CADF9 /* FilmsViewController.swift in Sources */,
 				5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */,
 				5A9D9FE82583E9BB001CADF9 /* SettingsSubViewController.swift in Sources */,
-				5AA791CA2593DF68001756A9 /* FilmSubTableViewCell.swift in Sources */,
 				5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */,
 				5A74E17025ED597200CEE4A5 /* Comments+CoreDataClass.swift in Sources */,
 				5A9D9FD72583C09A001CADF9 /* RatesViewController.swift in Sources */,

@@ -86,6 +86,20 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "GeoViewController.viewJsonRespond():GeoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "jsonRespond.allValues">
+            </PersistentString>
+            <PersistentString
+               value = "jsonRespond">
+            </PersistentString>
+            <PersistentString
+               value = "jsonRespond.allKeys">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "FilmsViewController.viewDidLoad():FilmsViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -107,14 +121,6 @@
             </PersistentString>
             <PersistentString
                value = "starsView.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "GeoViewController.viewJsonRespond():GeoViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "jsonRespond">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

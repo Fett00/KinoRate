@@ -37,14 +37,13 @@ class SettingsViewController: UIViewController,UITableViewDataSource,UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return settingsCellContent.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = settingsTableView.dequeueReusableCell(withIdentifier: "SettingsCellID", for: indexPath)
     
         cell.backgroundColor = .systemGray6
-
         cell.textLabel?.text = settingsCellContent[indexPath.row].name
         cell.imageView?.image = settingsCellContent[indexPath.row].image
         
@@ -54,5 +53,6 @@ class SettingsViewController: UIViewController,UITableViewDataSource,UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         navigationController?.pushViewController(settingsCellContent[indexPath.row].viewController ?? UIViewController(), animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
