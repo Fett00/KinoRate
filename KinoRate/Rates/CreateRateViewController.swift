@@ -11,6 +11,7 @@ class CreateRateViewController: UIViewController {
     
     let rateDBOperations = RatesDB()
     
+    
     let containerText = UIStackView()
     
     let authorTextView = UITextField()
@@ -73,10 +74,6 @@ class CreateRateViewController: UIViewController {
         containerLable.addArrangedSubview(starsValueLable)
         containerLable.addArrangedSubview(commentLable)
         
-        //        authorTextView.contentVerticalAlignment = .top
-        //        filmNameTextView.contentVerticalAlignment = .top
-        //        starsValueTextView.contentVerticalAlignment = .top
-        
         authorLable.text = "Автор"
         commentLable.text = "Коментарий"
         filmNameLable.text = "Название фильма"
@@ -101,9 +98,6 @@ class CreateRateViewController: UIViewController {
         containerLable.alignment = .fill
         containerLable.spacing = .leastNormalMagnitude
         containerLable.contentMode = .scaleAspectFit
-        
-        //        containerText.backgroundColor = .blue
-        //        containerLable.backgroundColor = .cyan
         
         NSLayoutConstraint.activate([
             

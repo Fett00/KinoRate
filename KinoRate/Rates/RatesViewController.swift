@@ -31,13 +31,8 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     func confRatesTableView() {
         view.addSubview(ratesTableView)
+        ratesTableView.frame = view.safeAreaLayoutGuide.layoutFrame
         
-        NSLayoutConstraint.activate([
-            ratesTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            ratesTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            ratesTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            ratesTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
-        ])
         ratesTableView.translatesAutoresizingMaskIntoConstraints = false
         
         ratesTableView.register(RatesTableViewCell.self, forCellReuseIdentifier: "RatesCellID")
@@ -59,11 +54,7 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         let cell = ratesTableView.dequeueReusableCell(withIdentifier: "RatesCellID", for: indexPath) as! RatesTableViewCell
         
-        cell.filmName.text = dataComments[indexPath.row].filmID ?? ""
-        cell.author.text = dataComments[indexPath.row].userID ?? ""
-        cell.comment.text = dataComments[indexPath.row].comment
-        cell.starsValue = Int8(dataComments[indexPath.row].rating)
-        cell.confRateCell()
+        cell.setUpCell(content: dataComments[indexPath.row])
         
         return cell
     }
@@ -94,4 +85,5 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         navigationController?.pushViewController(CreateRateViewController(), animated: true)
     }
+    
 }

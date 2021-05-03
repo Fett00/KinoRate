@@ -89,7 +89,7 @@ class ProfileViewController: UIViewController {
     
     //Создание и вызов окна уведомления смены аватара
     @objc func callAlert(){
-        let alert = UIAlertController(title: nil, message: "Change a avatar", preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: "Change an avatar", preferredStyle: .alert)
         alert.addAction(.init(title: "Face", style: .default, handler: { (_) in
             self.avatar.image = UIImage(named: "profileImage")
         }))

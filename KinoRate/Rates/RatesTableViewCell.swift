@@ -9,7 +9,6 @@ import UIKit
 
 class RatesTableViewCell: UITableViewCell {
     
-    // TODO: Звезды сделать по маске и заливкой цветом н заднем фоне
     let filmName = UILabel()
     let author = UILabel()
     let comment = UILabel()
@@ -20,26 +19,23 @@ class RatesTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.selectionStyle = .none
-        self.separatorInset = .zero
-        self.backgroundColor = .systemGray6
+        confRateCell()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func confRateCell(){
-
-        starsView = UIImage.createFiveStarsRating2(starsValue)
+    func confRateCell(){
         
-        addSubview(filmName)
-        addSubview(author)
-        addSubview(comment)
+        contentView.addSubview(filmName)
+        contentView.addSubview(author)
+        contentView.addSubview(comment)
         
-        for i in starsView{
-            addSubview(i)
-        }
+        
+        self.selectionStyle = .none
+        self.separatorInset = .zero
+        self.backgroundColor = .systemGray6
         
         author.textColor = .systemGray
         comment.numberOfLines = 5
@@ -48,16 +44,39 @@ class RatesTableViewCell: UITableViewCell {
         filmName.numberOfLines = 2
         filmName.lineBreakMode = .byTruncatingTail
         
+        
+        
         NSLayoutConstraint.activate([
         
-            filmName.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
-            filmName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            filmName.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
+            filmName.topAnchor.constraint(equalTo: self.contentView.topAnchor,constant: 10),
+            filmName.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
+            filmName.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor,constant: -10),
             filmName.heightAnchor.constraint(equalTo: filmName.heightAnchor),
             
             author.topAnchor.constraint(equalTo: filmName.bottomAnchor,constant: 10),
-            author.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            author.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
+
+            comment.topAnchor.constraint(equalTo: author.bottomAnchor, constant: 10),
+            comment.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor,constant: 10),
+            comment.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor,constant: -10),
+            comment.bottomAnchor.constraint(lessThanOrEqualTo: self.contentView.bottomAnchor,constant: -10)
         ])
+        
+        
+        filmName.translatesAutoresizingMaskIntoConstraints = false
+        comment.translatesAutoresizingMaskIntoConstraints = false
+        author.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+    }
+    
+    func confStars(){
+        
+        starsView = UIImage.createFiveStarsRating2(starsValue)
+        
+        for i in starsView{
+            contentView.addSubview(i)
+        }
         
         for i in 0..<starsView.count{
             starsView[i].topAnchor.constraint(equalTo: filmName.bottomAnchor,constant: 10).isActive = true
@@ -66,7 +85,7 @@ class RatesTableViewCell: UITableViewCell {
                 starsView[i].leadingAnchor.constraint(greaterThanOrEqualTo: author.trailingAnchor,constant: 10).isActive = true
             }
             else if i == starsView.count-1{
-                starsView[i].trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10).isActive = true
+                starsView[i].trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor,constant: -10).isActive = true
                 starsView[i].leadingAnchor.constraint(equalTo: starsView[i-1].trailingAnchor).isActive = true
             }
             else{
@@ -74,19 +93,17 @@ class RatesTableViewCell: UITableViewCell {
             }
         }
         
-        NSLayoutConstraint.activate([
-            comment.topAnchor.constraint(equalTo: author.bottomAnchor, constant: 10),
-            comment.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
-            comment.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
-            comment.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor,constant: -10)
-        ])
-        
-        filmName.translatesAutoresizingMaskIntoConstraints = false
-        comment.translatesAutoresizingMaskIntoConstraints = false
-        author.translatesAutoresizingMaskIntoConstraints = false
-        
         for i in starsView{
             i.translatesAutoresizingMaskIntoConstraints = false
         }
+    }
+    
+    public func setUpCell(content:Comments){
+        self.filmName.text = content.filmID ?? ""
+        self.author.text = content.userID ?? ""
+        self.comment.text = content.comment
+        self.starsValue = Int8(content.rating)
+        
+        confStars()
     }
 }
