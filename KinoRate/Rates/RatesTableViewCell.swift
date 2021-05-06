@@ -28,9 +28,9 @@ class RatesTableViewCell: UITableViewCell {
     
     func confRateCell(){
         
-        contentView.addSubview(filmName)
-        contentView.addSubview(author)
-        contentView.addSubview(comment)
+        addSubview(filmName)
+        addSubview(author)
+        addSubview(comment)
         
         self.separatorInset = .zero
         self.backgroundColor = .systemGray6
@@ -46,18 +46,18 @@ class RatesTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
         
-            filmName.topAnchor.constraint(equalTo: self.contentView.topAnchor,constant: 10),
-            filmName.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
-            filmName.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor,constant: -10),
+            filmName.topAnchor.constraint(equalTo: self.topAnchor,constant: 10),
+            filmName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            filmName.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
             filmName.heightAnchor.constraint(equalTo: filmName.heightAnchor),
             
             author.topAnchor.constraint(equalTo: filmName.bottomAnchor,constant: 10),
-            author.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
+            author.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
 
             comment.topAnchor.constraint(equalTo: author.bottomAnchor, constant: 10),
-            comment.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor,constant: 10),
-            comment.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor,constant: -10),
-            comment.bottomAnchor.constraint(lessThanOrEqualTo: self.contentView.bottomAnchor,constant: -10)
+            comment.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 10),
+            comment.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10),
+            comment.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor,constant: -10)
         ])
         
         
@@ -73,7 +73,7 @@ class RatesTableViewCell: UITableViewCell {
         starsView = UIImage.createFiveStarsRating2(starsValue)
         
         for i in starsView{
-            contentView.addSubview(i)
+            addSubview(i)
         }
         
         for i in 0..<starsView.count{
@@ -83,7 +83,7 @@ class RatesTableViewCell: UITableViewCell {
                 starsView[i].leadingAnchor.constraint(greaterThanOrEqualTo: author.trailingAnchor,constant: 10).isActive = true
             }
             else if i == starsView.count-1{
-                starsView[i].trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor,constant: -10).isActive = true
+                starsView[i].trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -10).isActive = true
                 starsView[i].leadingAnchor.constraint(equalTo: starsView[i-1].trailingAnchor).isActive = true
             }
             else{

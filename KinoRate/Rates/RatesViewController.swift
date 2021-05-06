@@ -31,7 +31,13 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     func confRatesTableView() {
         view.addSubview(ratesTableView)
-        ratesTableView.frame = view.safeAreaLayoutGuide.layoutFrame
+                
+        NSLayoutConstraint.activate([
+            ratesTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            ratesTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            ratesTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            ratesTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
+        ])
         
         ratesTableView.translatesAutoresizingMaskIntoConstraints = false
         
