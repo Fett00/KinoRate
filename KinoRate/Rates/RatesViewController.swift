@@ -59,6 +59,12 @@ class RatesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.present(ShowRateNewViewController(comment: dataComments[indexPath.row]), animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    
     
     //deleteFromDB
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

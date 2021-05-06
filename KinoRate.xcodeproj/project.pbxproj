@@ -14,6 +14,8 @@
 		5A8609642588C7EB00D1CB8B /* UIImageExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */; };
 		5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8609662588E6B700D1CB8B /* ProfileViewController.swift */; };
 		5A86B56F25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A86B56E25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift */; };
+		5A8ABDAF26438A7B00F6A6B0 /* ShowRateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8ABDAD26438A7B00F6A6B0 /* ShowRateNewViewController.swift */; };
+		5A8ABDB026438A7B00F6A6B0 /* ShowRateNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8ABDAE26438A7B00F6A6B0 /* ShowRateNewViewController.xib */; };
 		5A8D4DD525DEFEEA000A8C6B /* CreateRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D4DD425DEFEEA000A8C6B /* CreateRateViewController.swift */; };
 		5A91687925E1AAE1005C4F4F /* RatesDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91687825E1AAE1005C4F4F /* RatesDB.swift */; };
 		5A9D9FB02583BA8A001CADF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9D9FAF2583BA8A001CADF9 /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 		5A8609632588C7EB00D1CB8B /* UIImageExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtansion.swift; sourceTree = "<group>"; };
 		5A8609662588E6B700D1CB8B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A86B56E25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsSubCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A8ABDAD26438A7B00F6A6B0 /* ShowRateNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRateNewViewController.swift; sourceTree = "<group>"; };
+		5A8ABDAE26438A7B00F6A6B0 /* ShowRateNewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowRateNewViewController.xib; sourceTree = "<group>"; };
 		5A8D4DD425DEFEEA000A8C6B /* CreateRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRateViewController.swift; sourceTree = "<group>"; };
 		5A91687825E1AAE1005C4F4F /* RatesDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesDB.swift; sourceTree = "<group>"; };
 		5A9D9FAC2583BA8A001CADF9 /* KinoRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +135,8 @@
 				5A9D9FD62583C09A001CADF9 /* RatesViewController.swift */,
 				5A9D9FF52583F325001CADF9 /* RatesTableViewCell.swift */,
 				5A8D4DD425DEFEEA000A8C6B /* CreateRateViewController.swift */,
+				5A8ABDAD26438A7B00F6A6B0 /* ShowRateNewViewController.swift */,
+				5A8ABDAE26438A7B00F6A6B0 /* ShowRateNewViewController.xib */,
 			);
 			path = Rates;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8ABDB026438A7B00F6A6B0 /* ShowRateNewViewController.xib in Resources */,
 				5A9D9FBF2583BA8C001CADF9 /* LaunchScreen.storyboard in Resources */,
 				5A9D9FBC2583BA8C001CADF9 /* Assets.xcassets in Resources */,
 			);
@@ -229,6 +236,7 @@
 				5A9D9FE82583E9BB001CADF9 /* SettingsSubViewController.swift in Sources */,
 				5A8609672588E6B700D1CB8B /* ProfileViewController.swift in Sources */,
 				5A74E17025ED597200CEE4A5 /* Comments+CoreDataClass.swift in Sources */,
+				5A8ABDAF26438A7B00F6A6B0 /* ShowRateNewViewController.swift in Sources */,
 				5A9D9FD72583C09A001CADF9 /* RatesViewController.swift in Sources */,
 				5A9D9FB22583BA8A001CADF9 /* SceneDelegate.swift in Sources */,
 				5A86B56F25C0587E00F3B9B1 /* FilmsSubCollectionViewCell.swift in Sources */,

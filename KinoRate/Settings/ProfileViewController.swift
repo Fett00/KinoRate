@@ -35,6 +35,7 @@ class ProfileViewController: UIViewController {
         //let photoImage = UIImage(named: "profileImage2")
         
         avatar.image = photoImage
+        avatar.layer.cornerCurve = CALayerCornerCurve.continuous
         
         NSLayoutConstraint.activate([
             avatar.widthAnchor.constraint(equalToConstant: 160),
@@ -76,6 +77,11 @@ class ProfileViewController: UIViewController {
         //Настройка внешнего вида
         changeAvatarButton.setTitle("Change", for: .normal)
         changeAvatarButton.setTitleColor(.systemBlue, for: .normal)
+        changeAvatarButton.backgroundColor = .systemBlue
+        changeAvatarButton.setTitleColor(.white, for: .normal)
+        changeAvatarButton.setTitleColor(.gray, for: .highlighted)
+        changeAvatarButton.layer.cornerCurve = CALayerCornerCurve.continuous
+
 
         
         NSLayoutConstraint.activate([

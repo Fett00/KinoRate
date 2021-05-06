@@ -32,8 +32,6 @@ class RatesTableViewCell: UITableViewCell {
         contentView.addSubview(author)
         contentView.addSubview(comment)
         
-        
-        self.selectionStyle = .none
         self.separatorInset = .zero
         self.backgroundColor = .systemGray6
         

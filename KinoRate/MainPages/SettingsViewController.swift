@@ -52,7 +52,11 @@ class SettingsViewController: UIViewController,UITableViewDataSource,UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        navigationController?.pushViewController(settingsCellContent[indexPath.row].viewController ?? UIViewController(), animated: true)
-        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let activityItems = [UIImage(named: "led")!] // 1
+        let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil) // 2
+        //navigationController?.pushViewController(settingsCellContent[indexPath.row].viewController ?? UIViewController(), animated: true)
+        self.present(activityController, animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
