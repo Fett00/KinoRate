@@ -33,15 +33,5 @@ class ShowRateNewViewController: UIViewController {
         titleLable.text = rate.filmID ?? ""
         textView.text = rate.comment ?? ""
         author.text = rate.userID ?? ""
-        print(author.contentHuggingPriority(for: .horizontal))
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        print(view.bounds)
-    }
-    
-    deinit {
-        print(titleLable.text!,"выбыл.")
     }
 }
