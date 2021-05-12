@@ -23,16 +23,25 @@ class ShowRateNewViewController: UIViewController {
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var textView: UILabel!
     @IBOutlet weak var author: UILabel!
+    @IBAction func doneButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //view
-        
         titleLable.text = rate.filmID ?? ""
         textView.text = rate.comment ?? ""
         author.text = rate.userID ?? ""
-        
-
+        print(author.contentHuggingPriority(for: .horizontal))
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print(view.bounds)
+    }
+    
+    deinit {
+        print(titleLable.text!,"выбыл.")
     }
 }

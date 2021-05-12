@@ -34,34 +34,9 @@ class CreateRateViewController: UIViewController {
         confView()
     }
     
-    @objc func confirmRate(){
-        
-        rateDBOperations.create {
-            
-            let newComment = Comments(context: rateDBOperations.context)
-            newComment.comment = commentTextView.text
-            newComment.filmID = filmNameTextView.text
-            newComment.userID = authorTextView.text
-            newComment.id = "1"
-            
-            if let stars = Int32(starsValueTextView.text ?? ""){
-                if stars < 0 {
-                    newComment.rating = 0
-                }
-                else if stars > 5{
-                    newComment.rating = 5
-                }
-                else{
-                    newComment.rating = stars
-                }
-            }
-        }
-        
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
+    //Настройка вию
     func confView(){
-        
+    
         view.addSubview(containerText)
         containerText.addArrangedSubview(authorTextView)
         containerText.addArrangedSubview(filmNameTextView)
@@ -79,12 +54,41 @@ class CreateRateViewController: UIViewController {
         filmNameLable.text = "Название фильма"
         starsValueLable.text = "Кол-во звезд"
         
+        filmNameLable.backgroundColor = .cyan
+        
         authorTextView.borderStyle = .roundedRect
         filmNameTextView.borderStyle = .roundedRect
         starsValueTextView.borderStyle = .roundedRect
+        commentTextView.layer.cornerRadius = 2
         
         commentTextView.textContainer.maximumNumberOfLines = 5
-        //commentTextView.isScrollEnabled = false
+        commentTextView.font = commentTextView.font?.withSize(14)
+        
+        // MARK: - Почему это не работает??? ContentHugging ContentResistance
+        authorLable.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        commentLable.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        filmNameLable.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        starsValueLable.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        
+        authorLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        commentLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        filmNameLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        starsValueLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        
+        authorTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        filmNameTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        starsValueTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        commentTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        
+        authorTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        filmNameTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        starsValueTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        commentTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        
+        commentLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        commentLable.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        // MARK: -
+        
         starsValueTextView.keyboardType = .numberPad
         
         containerText.axis = .vertical
@@ -110,12 +114,38 @@ class CreateRateViewController: UIViewController {
             //containerText.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -10),
             containerText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
             containerText.leadingAnchor.constraint(equalTo: containerLable.trailingAnchor,constant: 10),
-            containerText.widthAnchor.constraint(equalTo: authorTextView.widthAnchor),
-            
+            //containerText.widthAnchor.constraint(equalTo: authorTextView.widthAnchor),
+
             containerLable.bottomAnchor.constraint(equalTo: containerText.bottomAnchor)
         ])
         
         containerText.translatesAutoresizingMaskIntoConstraints = false
         containerLable.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    //Создание нового коментария в БД
+    @objc func confirmRate(){
+        
+        rateDBOperations.create {
+            
+            let newComment = Comments(context: rateDBOperations.context)
+            newComment.comment = commentTextView.text
+            newComment.filmID = filmNameTextView.text
+            newComment.userID = authorTextView.text
+            newComment.id = "1"
+            
+            if let stars = Int32(starsValueTextView.text ?? ""){
+                if stars < 0 {
+                    newComment.rating = 0
+                }
+                else if stars > 5{
+                    newComment.rating = 5
+                }
+                else{
+                    newComment.rating = stars
+                }
+            }
+        }
+        navigationController?.popToRootViewController(animated: true)
     }
 }
