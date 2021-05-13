@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Comments" representedClassName="Comments" syncable="YES">
         <attribute name="comment" optional="YES" attributeType="String"/>
         <attribute name="filmID" optional="YES" attributeType="String"/>
@@ -7,9 +7,14 @@
         <attribute name="rating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="userID" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Films" representedClassName="Films" syncable="YES" codeGenerationType="class"/>
+    <entity name="Films" representedClassName="Films" syncable="YES" codeGenerationType="class">
+        <attribute name="filmID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="filmImageName" optional="YES" attributeType="String"/>
+        <attribute name="filmName" optional="YES" attributeType="String"/>
+        <attribute name="filmRating" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <elements>
-        <element name="Comments" positionX="-63" positionY="-18" width="128" height="104"/>
-        <element name="Films" positionX="-63" positionY="18" width="128" height="29"/>
+        <element name="Comments" positionX="328.653076171875" positionY="115.2894134521484" width="128" height="104"/>
+        <element name="Films" positionX="118.908203125" positionY="-9.492935180664062" width="128" height="103"/>
     </elements>
 </model>

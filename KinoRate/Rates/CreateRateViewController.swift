@@ -49,13 +49,16 @@ class CreateRateViewController: UIViewController {
         containerLable.addArrangedSubview(starsValueLable)
         containerLable.addArrangedSubview(commentLable)
         
-        authorLable.text = "Автор"
-        commentLable.text = "Коментарий"
-        filmNameLable.text = "Название фильма"
-        starsValueLable.text = "Кол-во звезд"
+//        authorLable.text = "Автор"
+//        commentLable.text = "Коментарий"
+//        filmNameLable.text = "Название фильма"
+//        starsValueLable.text = "Кол-во звезд"
         
-        filmNameLable.backgroundColor = .cyan
-        
+        authorLable.text = "ТекстТекстТекст"
+        commentLable.text = "ТекстТекст"
+        filmNameLable.text =  "ТекстТекст123"
+        starsValueLable.text = "ТекстТекст2"
+                
         authorTextView.borderStyle = .roundedRect
         filmNameTextView.borderStyle = .roundedRect
         starsValueTextView.borderStyle = .roundedRect
@@ -87,6 +90,9 @@ class CreateRateViewController: UIViewController {
         
         commentLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         commentLable.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        
+        commentTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        commentTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         // MARK: -
         
         starsValueTextView.keyboardType = .numberPad
@@ -106,16 +112,12 @@ class CreateRateViewController: UIViewController {
         NSLayoutConstraint.activate([
             
             containerLable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
-            //containerLable.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -10),
-            //containerLable.trailingAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.centerXAnchor),
             containerLable.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
             
             containerText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
-            //containerText.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -10),
             containerText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
             containerText.leadingAnchor.constraint(equalTo: containerLable.trailingAnchor,constant: 10),
-            //containerText.widthAnchor.constraint(equalTo: authorTextView.widthAnchor),
-
+            
             containerLable.bottomAnchor.constraint(equalTo: containerText.bottomAnchor)
         ])
         

@@ -15,36 +15,38 @@ class FilmsCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = .red
-        //confCell()
+        confCell()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        poster.image = nil
+    }
+    
     func confCell() {
         addSubview(poster)
         addSubview(filmName)
+
+        poster.contentMode = .scaleAspectFit
         
-        filmName.backgroundColor = .brown
-        
-        self.backgroundColor = .systemGray6
-        //clipsToBounds = true
         filmName.numberOfLines = 2
         filmName.font = .boldSystemFont(ofSize: 25)
         
         NSLayoutConstraint.activate([
             
-            poster.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            poster.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 10),
-            poster.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            //poster.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: 10),
+            poster.topAnchor.constraint(equalTo: self.topAnchor),
+            poster.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            poster.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            //poster.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             filmName.topAnchor.constraint(equalTo: poster.bottomAnchor,constant: 10),
-            filmName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            filmName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            filmName.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -10)
+            filmName.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            filmName.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            filmName.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         
         poster.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +54,7 @@ class FilmsCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpCell(content:Film) {
-        self.poster.image = content.poster
-        self.filmName.text = content.filmName
+        poster.image = content.poster
+        filmName.text = content.filmName
     }
 }

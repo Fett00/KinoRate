@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FilmsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class FilmsViewController: UIViewController{
     
     var filmsCollectionView:UICollectionView?
     
@@ -22,43 +22,45 @@ class FilmsViewController: UIViewController, UICollectionViewDataSource, UIColle
     func confCollectionView(){
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 10
+        layout.sectionInset = .init(top: 15, left: 5, bottom: 0, right: 5)
+
         filmsCollectionView = UICollectionView(frame: self.view.safeAreaLayoutGuide.layoutFrame, collectionViewLayout: layout)
+        filmsCollectionView?.isPagingEnabled = true
+        filmsCollectionView?.showsHorizontalScrollIndicator = false
         
         view.addSubview(filmsCollectionView ?? UICollectionView())
         
-        filmsCollectionView?.backgroundColor = UIColor.systemGray6
+        layout.itemSize = .init(width: (filmsCollectionView?.frame.width)! - 10, height: (filmsCollectionView?.frame.height)!)
+        
+        filmsCollectionView?.backgroundColor = .systemGray6
         
         filmsCollectionView?.register(FilmsCollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
-        //filmsCollectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         filmsCollectionView?.dataSource = self
         filmsCollectionView?.delegate = self
         
         NSLayoutConstraint.activate([
-            filmsCollectionView!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 10),
-            filmsCollectionView!.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,constant: -10),
-            filmsCollectionView!.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
-            filmsCollectionView!.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10)
+            filmsCollectionView!.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            filmsCollectionView!.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            filmsCollectionView!.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            filmsCollectionView!.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
         
         filmsCollectionView?.translatesAutoresizingMaskIntoConstraints = false
     }
 }
-extension FilmsViewController {
+extension FilmsViewController:UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return filmsSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! FilmsCollectionViewCell
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath)
-
-        //cell.backgroundColor = .cyan
-        //cell.contentView.backgroundColor = .brown
-        //cell.setUpCell(content: filmsSource[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! FilmsCollectionViewCell
+        
+        cell.setUpCell(content: filmsSource[indexPath.row])
         
         return cell
     }
