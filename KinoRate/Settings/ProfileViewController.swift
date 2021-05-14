@@ -36,6 +36,7 @@ class ProfileViewController: UIViewController {
         
         avatar.image = photoImage
         avatar.layer.cornerCurve = CALayerCornerCurve.continuous
+        avatar.layer.cornerRadius = 2
         
         NSLayoutConstraint.activate([
             avatar.widthAnchor.constraint(equalToConstant: 160),

@@ -11,20 +11,24 @@ class CreateRateViewController: UIViewController {
     
     let rateDBOperations = RatesDB()
     
+    let parentContainer = UIStackView()
     
     let containerText = UIStackView()
     
+    let filmPickerView = UITextField()
     let authorTextView = UITextField()
-    let commentTextView = UITextView()
-    let filmNameTextView = UITextField()
     let starsValueTextView = UITextField()
+    let commentTextView = UITextField()
     
     let containerLable = UIStackView()
     
-    let authorLable = UILabel()
-    let commentLable = UILabel()
     let filmNameLable = UILabel()
+    let authorLable = UILabel()
     let starsValueLable = UILabel()
+    let commentLable = UILabel()
+    
+    let pickerForStarsValue = UIPickerView()
+    let pickerForFilmPickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,68 +38,48 @@ class CreateRateViewController: UIViewController {
         confView()
     }
     
-    //Настройка вию
+    //Настройка view
     func confView(){
+        
+        view.addSubview(parentContainer)
+        
+        parentContainer.addArrangedSubview(containerLable)
+        parentContainer.addArrangedSubview(containerText)
+        
+        parentContainer.axis = .horizontal
+        parentContainer.alignment = .fill
+        parentContainer.distribution = .fillEqually
+        parentContainer.spacing = 10
     
-        view.addSubview(containerText)
+        containerText.addArrangedSubview(filmPickerView)
         containerText.addArrangedSubview(authorTextView)
-        containerText.addArrangedSubview(filmNameTextView)
         containerText.addArrangedSubview(starsValueTextView)
         containerText.addArrangedSubview(commentTextView)
         
-        view.addSubview(containerLable)
-        containerLable.addArrangedSubview(authorLable)
         containerLable.addArrangedSubview(filmNameLable)
+        containerLable.addArrangedSubview(authorLable)
         containerLable.addArrangedSubview(starsValueLable)
         containerLable.addArrangedSubview(commentLable)
         
-//        authorLable.text = "Автор"
-//        commentLable.text = "Коментарий"
-//        filmNameLable.text = "Название фильма"
-//        starsValueLable.text = "Кол-во звезд"
-        
-        authorLable.text = "ТекстТекстТекст"
-        commentLable.text = "ТекстТекст"
-        filmNameLable.text =  "ТекстТекст123"
-        starsValueLable.text = "ТекстТекст2"
-                
+        authorLable.text = "Автор"
+        commentLable.text = "Коментарий"
+        filmNameLable.text = "Название фильма"
+        starsValueLable.text = "Кол-во звезд"
+
         authorTextView.borderStyle = .roundedRect
-        filmNameTextView.borderStyle = .roundedRect
+        filmPickerView.borderStyle = .roundedRect
         starsValueTextView.borderStyle = .roundedRect
-        commentTextView.layer.cornerRadius = 2
+        commentTextView.borderStyle = .roundedRect
         
-        commentTextView.textContainer.maximumNumberOfLines = 5
-        commentTextView.font = commentTextView.font?.withSize(14)
         
-        // MARK: - Почему это не работает??? ContentHugging ContentResistance
-        authorLable.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        commentLable.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        filmNameLable.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-        starsValueLable.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        pickerForFilmPickerView.dataSource = self
+        pickerForFilmPickerView.delegate = self
+        filmPickerView.inputView = pickerForFilmPickerView
         
-        authorLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-        commentLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-        filmNameLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-        starsValueLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        pickerForStarsValue.dataSource = self
+        pickerForStarsValue.delegate = self
+        starsValueTextView.inputView = pickerForStarsValue
         
-        authorTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        filmNameTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        starsValueTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        commentTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        
-        authorTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        filmNameTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        starsValueTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        commentTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        
-        commentLable.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
-        commentLable.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        
-        commentTextView.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        commentTextView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-        // MARK: -
-        
-        starsValueTextView.keyboardType = .numberPad
         
         containerText.axis = .vertical
         containerText.distribution = .fillEqually
@@ -111,18 +95,11 @@ class CreateRateViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             
-            containerLable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
-            containerLable.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
-            
-            containerText.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 20),
-            containerText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -10),
-            containerText.leadingAnchor.constraint(equalTo: containerLable.trailingAnchor,constant: 10),
-            
-            containerLable.bottomAnchor.constraint(equalTo: containerText.bottomAnchor)
+            parentContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 10),
+            parentContainer.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor,constant: 10),
+            parentContainer.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10)
         ])
-        
-        containerText.translatesAutoresizingMaskIntoConstraints = false
-        containerLable.translatesAutoresizingMaskIntoConstraints = false
+        parentContainer.translatesAutoresizingMaskIntoConstraints = false
     }
     
     //Создание нового коментария в БД
@@ -132,7 +109,7 @@ class CreateRateViewController: UIViewController {
             
             let newComment = Comments(context: rateDBOperations.context)
             newComment.comment = commentTextView.text
-            newComment.filmID = filmNameTextView.text
+            newComment.filmID = filmPickerView.text
             newComment.userID = authorTextView.text
             newComment.id = "1"
             
@@ -149,5 +126,46 @@ class CreateRateViewController: UIViewController {
             }
         }
         navigationController?.popToRootViewController(animated: true)
+    }
+}
+
+extension CreateRateViewController: UIPickerViewDelegate,UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView {
+        case pickerForFilmPickerView:
+            return filmsSource.count
+        case pickerForStarsValue:
+            return 6
+        default:
+            return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerView {
+        case pickerForFilmPickerView:
+            return filmsSource[row].filmName
+        case pickerForStarsValue:
+            return String(row)
+        default:
+            return ""
+        }
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        switch pickerView {
+        case pickerForFilmPickerView:
+            filmPickerView.text = filmsSource[row].filmName
+        case pickerForStarsValue:
+            starsValueTextView.text = String(row)
+        default:
+            break
+        }
     }
 }
